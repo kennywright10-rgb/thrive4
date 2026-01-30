@@ -1,5 +1,6 @@
 /* ==========================================
-   THRIVE 4 PEAK PERFORMANCE - STYLESHEET
+   THRIVE 4 PEAK PERFORMANCE - UPDATED STYLESHEET
+   Brand Colors Matching Existing Site
    ========================================== */
 
 /* ==========================================
@@ -21,7 +22,7 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     font-weight: 400;
     line-height: 1.7;
-    color: #6B7280;
+    color: #333333;
     background-color: #FFFFFF;
     overflow-x: hidden;
 }
@@ -34,7 +35,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     line-height: 1.2;
-    color: #0A5F5F;
+    color: #1a1a1a;
     margin-bottom: 1rem;
 }
 
@@ -63,18 +64,18 @@ p {
 }
 
 a {
-    color: #4A90A4;
+    color: #00CED1;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
 a:hover {
-    color: #0A5F5F;
+    color: #00B8B8;
 }
 
 strong {
     font-weight: 600;
-    color: #0A5F5F;
+    color: #1a1a1a;
 }
 
 /* ==========================================
@@ -99,7 +100,7 @@ strong {
 
 .section-header p {
     font-size: 1.25rem;
-    color: #6B7280;
+    color: #666666;
 }
 
 /* ==========================================
@@ -122,26 +123,26 @@ strong {
 }
 
 .btn-primary {
-    background-color: #FF6B6B;
+    background-color: #00CED1;
     color: #FFFFFF;
 }
 
 .btn-primary:hover {
-    background-color: #e55555;
+    background-color: #00B8B8;
     color: #FFFFFF;
     transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(255, 107, 107, 0.2);
+    box-shadow: 0 8px 16px rgba(0, 206, 209, 0.3);
 }
 
 .btn-secondary {
     background-color: transparent;
-    border: 2px solid #0A5F5F;
-    color: #0A5F5F;
+    border: 2px solid #00CED1;
+    color: #00CED1;
     padding: 14px 28px;
 }
 
 .btn-secondary:hover {
-    background-color: #0A5F5F;
+    background-color: #00CED1;
     color: #FFFFFF;
 }
 
@@ -151,7 +152,7 @@ strong {
 }
 
 .btn-link {
-    color: #4A90A4;
+    color: #00CED1;
     font-weight: 500;
     text-decoration: none;
     display: inline-flex;
@@ -160,7 +161,7 @@ strong {
 }
 
 .btn-link:hover {
-    color: #0A5F5F;
+    color: #00B8B8;
     transform: translateX(4px);
 }
 
@@ -200,14 +201,14 @@ strong {
 }
 
 .nav-link {
-    color: #0A5F5F;
+    color: #1a1a1a;
     font-weight: 500;
     font-size: 1rem;
     padding: 0.5rem 0;
 }
 
 .nav-link:hover {
-    color: #4A90A4;
+    color: #00CED1;
 }
 
 .dropdown {
@@ -239,13 +240,13 @@ strong {
 .dropdown-menu a {
     display: block;
     padding: 0.75rem 1.5rem;
-    color: #0A5F5F;
+    color: #1a1a1a;
     font-weight: 500;
 }
 
 .dropdown-menu a:hover {
     background-color: #F9FAFB;
-    color: #4A90A4;
+    color: #00CED1;
 }
 
 .header-cta {
@@ -255,7 +256,7 @@ strong {
 }
 
 .phone-link {
-    color: #0A5F5F;
+    color: #1a1a1a;
     font-weight: 600;
     font-size: 1.125rem;
 }
@@ -272,7 +273,7 @@ strong {
 .mobile-menu-toggle span {
     width: 25px;
     height: 3px;
-    background-color: #0A5F5F;
+    background-color: #1a1a1a;
     margin: 3px 0;
     transition: all 0.3s ease;
 }
@@ -288,6 +289,7 @@ strong {
     align-items: center;
     padding: 6rem 0;
     overflow: hidden;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
 }
 
 .hero-background {
@@ -296,17 +298,8 @@ strong {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
-}
-
-.hero-background::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(10, 95, 95, 0.85) 0%, rgba(74, 144, 164, 0.75) 100%);
+    z-index: 0;
+    opacity: 0.3;
 }
 
 .hero-background img {
@@ -343,12 +336,80 @@ strong {
 }
 
 /* ==========================================
+   COMPACT SERVICE CARDS SECTION (NEW)
+   ========================================== */
+
+.services-compact {
+    padding: 5rem 0;
+    background-color: #F9FAFB;
+}
+
+.services-compact .section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.services-compact .section-header p {
+    font-size: 1.125rem;
+    color: #666666;
+}
+
+.services-compact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.service-compact-card {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.service-compact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.service-compact-image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.service-compact-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.service-compact-card:hover .service-compact-image img {
+    transform: scale(1.05);
+}
+
+.service-compact-content {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.service-compact-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0;
+    color: #1a1a1a;
+}
+
+/* ==========================================
    TRUST SECTION
    ========================================== */
 
 .trust-section {
     padding: 5rem 0;
-    background-color: #F9FAFB;
+    background-color: #FFFFFF;
 }
 
 .trust-header {
@@ -362,7 +423,7 @@ strong {
 
 .location-badge {
     font-size: 1.25rem;
-    color: #0A5F5F;
+    color: #00CED1;
     font-weight: 600;
 }
 
@@ -376,9 +437,8 @@ strong {
 .trust-card {
     text-align: center;
     padding: 2rem;
-    background-color: #FFFFFF;
+    background-color: #F9FAFB;
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
 }
 
@@ -402,16 +462,17 @@ strong {
 }
 
 .google-reviews strong {
-    color: #0A5F5F;
+    color: #00CED1;
     font-size: 1.5rem;
 }
 
 /* ==========================================
-   SERVICES SECTION
+   DETAILED SERVICES SECTION
    ========================================== */
 
-.services-section {
+.services-detailed {
     padding: 6rem 0;
+    background-color: #F9FAFB;
 }
 
 .services-grid {
@@ -460,7 +521,7 @@ strong {
 }
 
 .service-benefit {
-    color: #4A90A4;
+    color: #00CED1;
     font-weight: 600;
     font-size: 1rem;
     margin-bottom: 1rem;
@@ -469,7 +530,7 @@ strong {
 .service-content p {
     font-size: 1rem;
     margin-bottom: 1.5rem;
-    color: #6B7280;
+    color: #666666;
 }
 
 /* ==========================================
@@ -478,7 +539,7 @@ strong {
 
 .how-it-works {
     padding: 6rem 0;
-    background-color: #F9FAFB;
+    background-color: #FFFFFF;
 }
 
 .steps-grid {
@@ -502,7 +563,7 @@ strong {
     right: calc(50% - 80px);
     width: 40px;
     height: 40px;
-    background-color: #FF6B6B;
+    background-color: #00CED1;
     color: #FFFFFF;
     border-radius: 50%;
     display: flex;
@@ -519,7 +580,7 @@ strong {
 
 .step p {
     font-size: 1rem;
-    color: #6B7280;
+    color: #666666;
 }
 
 /* ==========================================
@@ -528,7 +589,7 @@ strong {
 
 .conversion-section {
     padding: 5rem 0;
-    background: linear-gradient(135deg, #0A5F5F 0%, #4A90A4 100%);
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
     text-align: center;
 }
 
@@ -556,7 +617,7 @@ strong {
 }
 
 .conversion-note a {
-    color: #FFFFFF;
+    color: #00CED1;
     font-weight: 700;
     text-decoration: underline;
 }
@@ -565,6 +626,7 @@ strong {
     font-size: 1rem;
     margin-top: 1rem;
     font-weight: 600;
+    color: #FFFFFF;
 }
 
 /* ==========================================
@@ -573,6 +635,7 @@ strong {
 
 .testimonials-section {
     padding: 6rem 0;
+    background-color: #F9FAFB;
 }
 
 .testimonials-grid {
@@ -582,14 +645,14 @@ strong {
 }
 
 .testimonial-card {
-    background-color: #F9FAFB;
+    background-color: #FFFFFF;
     padding: 2.5rem;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .testimonial-rating {
-    color: #FF6B6B;
+    color: #00CED1;
     font-size: 1.25rem;
     margin-bottom: 1rem;
 }
@@ -597,7 +660,7 @@ strong {
 .testimonial-text {
     font-size: 1.125rem;
     line-height: 1.7;
-    color: #0A5F5F;
+    color: #1a1a1a;
     font-style: italic;
     margin-bottom: 1.5rem;
 }
@@ -617,13 +680,13 @@ strong {
 
 .testimonial-author strong {
     display: block;
-    color: #0A5F5F;
+    color: #1a1a1a;
     font-size: 1rem;
 }
 
 .testimonial-author span {
     display: block;
-    color: #6B7280;
+    color: #666666;
     font-size: 0.875rem;
 }
 
@@ -632,7 +695,7 @@ strong {
    ========================================== */
 
 .footer {
-    background-color: #0A5F5F;
+    background-color: #1a1a1a;
     color: #FFFFFF;
     padding: 4rem 0 2rem;
 }
@@ -674,7 +737,7 @@ strong {
 }
 
 .footer-column a:hover {
-    color: #FFFFFF;
+    color: #00CED1;
 }
 
 .social-links {
@@ -750,6 +813,10 @@ strong {
     .hero-subtitle {
         font-size: 1.125rem;
     }
+    
+    .services-compact-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
 }
 
 /* ==========================================
@@ -819,6 +886,12 @@ strong {
         text-align: center;
     }
     
+    /* Services Compact Mobile */
+    .services-compact-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
     /* Services Grid Mobile */
     .services-grid {
         grid-template-columns: 1fr;
@@ -848,7 +921,8 @@ strong {
     
     /* Section Spacing Mobile */
     .trust-section,
-    .services-section,
+    .services-compact,
+    .services-detailed,
     .how-it-works,
     .testimonials-section {
         padding: 3rem 0;
@@ -872,7 +946,7 @@ a:focus,
 button:focus,
 input:focus,
 textarea:focus {
-    outline: 3px solid #4A90A4;
+    outline: 3px solid #00CED1;
     outline-offset: 2px;
 }
 
@@ -881,7 +955,7 @@ textarea:focus {
     position: absolute;
     top: -40px;
     left: 0;
-    background: #0A5F5F;
+    background: #1a1a1a;
     color: white;
     padding: 8px;
     text-decoration: none;
@@ -901,18 +975,6 @@ textarea:focus {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
-    }
-}
-
-/* High Contrast Mode */
-@media (prefers-contrast: high) {
-    body {
-        background: #000;
-        color: #fff;
-    }
-    
-    a {
-        color: #5bc0de;
     }
 }
 
