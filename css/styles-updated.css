@@ -412,6 +412,7 @@ strong {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center top; /* Show top of image (heads) instead of center */
     transition: transform 0.3s ease;
 }
 
@@ -531,6 +532,7 @@ strong {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center top; /* Show top of image (heads) instead of center */
     transition: transform 0.3s ease;
 }
 
