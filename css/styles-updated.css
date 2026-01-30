@@ -329,23 +329,32 @@ strong {
 }
 
 .hero-title {
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     font-size: 3.5rem;
     line-height: 1.1;
     margin-bottom: 1.5rem;
 }
 
 .hero-subtitle {
-    color: rgba(255, 255, 255, 0.95);
+    color: #FFFFFF !important;
     font-size: 1.375rem;
     line-height: 1.6;
     margin-bottom: 2.5rem;
+    opacity: 0.95;
 }
 
 .hero-cta {
     display: flex;
     gap: 1.5rem;
     flex-wrap: wrap;
+}
+
+/* Force white text in hero section */
+.hero h1,
+.hero p,
+.hero-title,
+.hero-subtitle {
+    color: #FFFFFF !important;
 }
 
 /* ==========================================
