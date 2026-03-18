@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Physician-led wellness clinic in Alpharetta, GA — IV therapy, cryotherapy, HOCATT ozone sauna, hyperbaric oxygen, red light therapy, and GLP-1 weight loss. Serving North Fulton County.">
+
+    <title>Thrive 4 Peak Performance | Physician-Led Wellness Clinic in Alpharetta, GA</title>
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.thrive4peakperformance.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Thrive 4 Peak Performance | Wellness Clinic in Alpharetta, GA">
+    <meta property="og:description" content="Physician-led wellness clinic in Alpharetta, GA. IV therapy, cryotherapy, HOCATT, hyperbaric oxygen, red light therapy, peptides & GLP-1 weight loss. Serving North Fulton County.">
+    <meta property="og:url" content="https://www.thrive4peakperformance.com/">
+    <meta property="og:image" content="https://www.thrive4peakperformance.com/images/hero-home.jpg">
+    <meta property="og:site_name" content="Thrive 4 Peak Performance">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Thrive 4 Peak Performance | Wellness Clinic in Alpharetta, GA">
+    <meta name="twitter:description" content="Physician-led wellness clinic in Alpharetta, GA. IV therapy, cryotherapy, HOCATT, hyperbaric oxygen, red light therapy &amp; more.">
+    <meta name="twitter:image" content="https://www.thrive4peakperformance.com/images/hero-home.jpg">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#00CED1">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FQN6ZGY0P9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-FQN6ZGY0P9', {
+            'send_page_view': true,
+            'allow_google_signals': true,
+            'allow_ad_personalization_signals': true
+        });
+        
+        // Track phone clicks
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
+                el.addEventListener('click', function() {
+                    gtag('event', 'phone_click', {
+                        'event_category': 'engagement',
+                        'event_label': 'Phone Number Click'
+                    });
+                });
+            });
+            
+            // Track email clicks
+            document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
+                el.addEventListener('click', function() {
+                    gtag('event', 'email_click', {
+                        'event_category': 'engagement',
+                        'event_label': 'Email Click'
+                    });
+                });
+            });
+            
+            // Track CTA button clicks
+            document.querySelectorAll('.btn-primary, .cta-button').forEach(function(el) {
+                el.addEventListener('click', function() {
+                    gtag('event', 'cta_click', {
+                        'event_category': 'engagement',
+                        'event_label': el.textContent.trim(),
+                        'value': 1
+                    });
+                });
+            });
+            
+            // Track form submissions
+            document.querySelectorAll('form').forEach(function(form) {
+                form.addEventListener('submit', function() {
+                    gtag('event', 'form_submit', {
+                        'event_category': 'conversion',
+                        'event_label': 'Appointment Request',
+                        'value': 1
+                    });
+                });
+            });
+        });
+    </script>
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "Thrive 4 Peak Performance",
+      "image": "/images/logo.png",
+      "url": "https://www.thrive4peakperformance.com",
+      "telephone": "+14703596195",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "3568 Old Milton Pkwy",
+        "addressLocality": "Alpharetta",
+        "addressRegion": "GA",
+        "postalCode": "30005",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        "Alpharetta, GA",
+        "Milton, GA",
+        "Roswell, GA",
+        "Johns Creek, GA",
+        "North Fulton County"
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ]
+    }
+    </script>
+    
+    <link rel="stylesheet" href="css/styles-updated.css">
+</head>
+<body>
+    
+    <div id="header-placeholder"></div>
+    
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-background">
+            <img src="/images/hero-home.jpg" alt="Modern wellness clinic interior at Thrive 4 Peak Performance in Alpharetta, GA">
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Recover Faster. Perform Stronger. Feel Like Yourself Again.</h1>
+                <p class="hero-subtitle">Advanced recovery therapies for more energy, faster recovery, and peak performance.</p>
+                <div class="hero-cta">
+                    <a href="/book-appointment.html" class="btn btn-primary btn-lg">Book Your Consultation</a>
+                    <a href="tel:4703596195" class="btn btn-secondary btn-lg">Call Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- COMPACT SERVICE CARDS -->
+    <section class="services-compact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Performance Services</h2>
+                <p>Therapies Designed By Science, Tailored For You</p>
+            </div>
+            
+            <div class="services-compact-grid">
+                <!-- Service 1: IV Therapy -->
+                <a href="/services/iv-therapy-alpharetta-ga.html" class="service-compact-card">
+                    <div class="service-compact-image">
+                        <img src="/images/service-iv-therapy.jpg" alt="IV Drip Nutrition therapy in Alpharetta GA" loading="lazy">
+                    </div>
+                    <div class="service-compact-content">
+                        <h3>IV DRIP NUTRITION</h3>
+                    </div>
+                </a>
+
+                <!-- Service 2: HOCATT -->
+                <a href="/services/hocatt-ozone-sauna-alpharetta.html" class="service-compact-card">
+                    <div class="service-compact-image">
+                        <img src="/images/service-hocatt.jpg" alt="HOCATT ozone sauna full body detox Alpharetta" loading="lazy">
+                    </div>
+                    <div class="service-compact-content">
+                        <h3>HOCATT FULL BODY DETOX</h3>
+                    </div>
+                </a>
+
+                <!-- Service 3: Cryotherapy -->
+                <a href="/services/cryotherapy-alpharetta-ga.html" class="service-compact-card">
+                    <div class="service-compact-image">
+                        <img src="/images/service-cryo.jpg" alt="Whole-body cryotherapy chamber in Alpharetta GA" loading="lazy">
+                    </div>
+                    <div class="service-compact-content">
+                        <h3>CRYOTHERAPY</h3>
+                    </div>
+                </a>
+
+                <!-- Service 4: Hyperbaric -->
+                <a href="/services/hyperbaric-oxygen-therapy-alpharetta.html" class="service-compact-card">
+                    <div class="service-compact-image">
+                        <img src="/images/service-hyperbaric.jpg" alt="Hyperbaric oxygen therapy chamber Alpharetta" loading="lazy">
+                    </div>
+                    <div class="service-compact-content">
+                        <h3>HYPERBARIC CHAMBER</h3>
+                    </div>
+                </a>
+
+                <!-- Service 5: Red Light -->
+                <a href="/services/red-light-therapy-alpharetta.html" class="service-compact-card">
+                    <div class="service-compact-image">
+                        <img src="/images/service-red-light.jpg" alt="Red light therapy session in Alpharetta GA" loading="lazy">
+                    </div>
+                    <div class="service-compact-content">
+                        <h3>RED LIGHT THERAPY</h3>
+                    </div>
+                </a>
+
+                <!-- Service 6: Compression -->
+                <a href="/services/compression-therapy-alpharetta.html" class="service-compact-card">
+                    <div class="service-compact-image">
+                        <img src="/images/service-compression.jpg" alt="Compression boots recovery therapy Alpharetta" loading="lazy">
+                    </div>
+                    <div class="service-compact-content">
+                        <h3>COMPRESSION BOOTS</h3>
+                    </div>
+                </a>
+
+                <!-- Service 7: Peptides -->
+                <a href="/services/peptide-therapy-alpharetta.html" class="service-compact-card">
+                    <div class="service-compact-image">
+                        <img src="/images/service-peptides.jpg" alt="Peptide therapy and aesthetics Alpharetta GA" loading="lazy">
+                    </div>
+                    <div class="service-compact-content">
+                        <h3>AESTHETICS & PEPTIDES</h3>
+                    </div>
+                </a>
+
+                <!-- Service 8: Weight Loss -->
+                <a href="/services/weight-loss-glp1-alpharetta.html" class="service-compact-card">
+                    <div class="service-compact-image">
+                        <img src="/images/service-weight-loss.jpg" alt="GLP-1 physician-supervised weight loss Alpharetta" loading="lazy">
+                    </div>
+                    <div class="service-compact-content">
+                        <h3>WEIGHT LOSS (GLP-1)</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- WHY CHOOSE THRIVE -->
+    <section class="trust-section">
+        <div class="container">
+            <div class="trust-header">
+                <h2>Why Choose Thrive</h2>
+            </div>
+            
+            <div class="trust-grid">
+                <div class="trust-card">
+                    <img src="/images/icon-physician-led.svg" alt="Physician-led care icon" width="80" height="80">
+                    <h3>Physician-Led Care</h3>
+                    <p>Led by Medical Experts, we transition healthcare from reactive to proactive. Our personalized approach is built on scientific research and proven clinical practice.</p>
+                </div>
+                
+                <div class="trust-card">
+                    <img src="/images/icon-quality.svg" alt="Quality ingredients icon" width="80" height="80">
+                    <h3>Highest Quality Ingredients</h3>
+                    <p>All IV Drips, IM Shots, and peptide nutrients are supplied through strategic partnerships with the industry's most awarded compounding pharmacies, guaranteeing trusted quality and safety.</p>
+                </div>
+                
+                <div class="trust-card">
+                    <img src="/images/icon-equipment.svg" alt="Medical equipment icon" width="80" height="80">
+                    <h3>Medical Grade Equipment</h3>
+                    <p>Every piece of equipment is meticulously selected and maintained under strict clinical protocol. We utilize proven, Medical Grade devices to ensure the accuracy, efficacy, and safety of every therapeutic application we offer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- HOW IT WORKS -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How It Works</h2>
+            </div>
+            
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-icon">
+                        <img src="/images/icon-calendar.svg" alt="Book appointment icon" width="80" height="80">
+                    </div>
+                    <div class="step-number">1</div>
+                    <h3>Book a Free Consultation</h3>
+                    <p>Call us at (470) 359-6195 or book online. Most appointments available within 48 hours. No pressure — just a real conversation about your goals.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-icon">
+                        <img src="/images/icon-assessment.svg" alt="Medical assessment icon" width="80" height="80">
+                    </div>
+                    <div class="step-number">2</div>
+                    <h3>Get Your Personalized Plan</h3>
+                    <p>Our board-certified physician evaluates your health history and goals, then builds a protocol tailored to you — not a one-size-fits-all menu.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-icon">
+                        <img src="/images/icon-optimize.svg" alt="Optimize performance icon" width="80" height="80">
+                    </div>
+                    <div class="step-number">3</div>
+                    <h3>Feel the Difference</h3>
+                    <p>Most patients notice real changes within their first few sessions — better energy, faster recovery, and less of the inflammation that was holding them back.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- PRIMARY CONVERSION SECTION -->
+    <section class="conversion-section">
+        <div class="container">
+            <div class="conversion-content">
+                <h2>Ready to Maximize Your Performance?</h2>
+                <p>Our expert medical team is ready to create your personalized performance plan</p>
+                <a href="/book-appointment.html" class="btn btn-primary btn-lg">Book Now</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- TESTIMONIALS -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Patients Say</h2>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"After three months of IV therapy and red light sessions, my marathon recovery time dropped by 40%. The medical team here actually listens."</p>
+                    <div class="testimonial-author">
+                        <img src="/images/testimonial-1.jpg" alt="Sarah M. from Milton" class="testimonial-photo">
+                        <div>
+                            <strong>Sarah M.</strong>
+                            <span>Milton, GA</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"I was skeptical about HOCATT, but the physician walked me through the science. My chronic inflammation is finally under control."</p>
+                    <div class="testimonial-author">
+                        <img src="/images/testimonial-2.jpg" alt="David R. from Roswell" class="testimonial-photo">
+                        <div>
+                            <strong>David R.</strong>
+                            <span>Roswell, GA</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Best decision I made for my health this year. Real doctors, real results, none of the wellness industry BS."</p>
+                    <div class="testimonial-author">
+                        <img src="/images/testimonial-3.jpg" alt="Jennifer K. from Johns Creek" class="testimonial-photo">
+                        <div>
+                            <strong>Jennifer K.</strong>
+                            <span>Johns Creek, GA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div id="footer-placeholder"></div>
+    
+    <!-- FAQ Schema for AI Search Visibility -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What services does Thrive 4 Peak Performance offer in Alpharetta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Thrive 4 Peak Performance offers IV therapy and NAD+, HOCATT ozone sauna, whole-body cryotherapy, hyperbaric oxygen therapy, red light therapy, compression therapy, peptide therapy, and physician-supervised GLP-1 weight loss — all under board-certified medical oversight in Alpharetta, GA."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Thrive 4 Peak Performance physician-led?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. All protocols are designed and overseen by a board-certified physician. Our licensed nurse practitioners administer treatments under direct physician supervision, which is what separates us from spa-based wellness centers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is Thrive 4 Peak Performance located?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We are located at 3568 Old Milton Pkwy, Alpharetta, GA 30005 — approximately one mile east of Avalon. We serve patients throughout North Fulton County including Milton, Roswell, Johns Creek, Cumming, and Sandy Springs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I book an appointment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can call us at (470) 359-6195 or book online through our website. Most appointments are available within 48 hours. Initial consultations are complimentary."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does insurance cover wellness therapies like IV therapy or cryotherapy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most elective wellness therapies are not covered by standard health insurance. However, many services may qualify for HSA/FSA reimbursement. We provide itemized receipts and can assist with documentation."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Load main.js first so functions are available -->
+    <script src="js/main.js"></script>
+    
+    <!-- Load Header and Footer with JavaScript -->
+    <script>
+        // Load header
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                // Reinitialize mobile menu after header loads
+                if (typeof initMobileMenu === 'function') {
+                    initMobileMenu();
+                }
+            })
+            .catch(error => console.error('Error loading header:', error));
+        
+        // Load footer
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tour Thrive 4 Peak Performance in Alpharetta, GA. See our state-of-the-art wellness facility, treatment rooms, hyperbaric chamber, cryotherapy, HOCATT sauna, and IV therapy suites.">
+
+    <title>Photo Gallery | Thrive 4 Peak Performance | Alpharetta, GA</title>
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.thrive4peakperformance.com/gallery.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Photo Gallery | Thrive 4 Peak Performance">
+    <meta property="og:description" content="Take a virtual tour of our physician-led wellness clinic in Alpharetta, GA. See our IV therapy suites, cryotherapy chamber, HOCATT sauna, and hyperbaric oxygen facility.">
+    <meta property="og:url" content="https://www.thrive4peakperformance.com/gallery.html">
+    <meta property="og:image" content="https://www.thrive4peakperformance.com/images/DSC_3318.jpg">
+    <meta property="og:site_name" content="Thrive 4 Peak Performance">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Photo Gallery | Thrive 4 Peak Performance | Alpharetta, GA">
+    <meta name="twitter:image" content="https://www.thrive4peakperformance.com/images/DSC_3318.jpg">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#00CED1">
+
+    <link rel="stylesheet" href="css/styles-updated.css">
+
+    <style>
+        /* ── Gallery Page Styles ── */
+        .gallery-hero {
+            background: linear-gradient(135deg, #0a2342 0%, #00CED1 100%);
+            padding: 80px 0 60px;
+            text-align: center;
+            color: #fff;
+        }
+        .gallery-hero h1 {
+            color: #fff;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .gallery-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ── Filter Tabs ── */
+        .gallery-filters {
+            background: #f9fafb;
+            padding: 28px 0;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .filter-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .filter-btn {
+            background: #fff;
+            border: 2px solid #e5e7eb;
+            border-radius: 50px;
+            color: #555;
+            cursor: pointer;
+            font-size: 0.875rem;
+            font-weight: 600;
+            padding: 8px 20px;
+            transition: all 0.2s ease;
+            font-family: inherit;
+        }
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #00CED1;
+            border-color: #00CED1;
+            color: #fff;
+        }
+
+        /* ── Grid ── */
+        .gallery-section {
+            padding: 60px 0 80px;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+        @media (max-width: 900px) {
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 560px) {
+            .gallery-grid { grid-template-columns: 1fr; }
+            .gallery-hero h1 { font-size: 2rem; }
+        }
+
+        /* ── Cards ── */
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            cursor: pointer;
+            background: #111;
+            aspect-ratio: 4 / 3;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .gallery-item.tall {
+            aspect-ratio: 3 / 4;
+        }
+        .gallery-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.04);
+        }
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+            color: #fff;
+            padding: 28px 14px 14px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+        .gallery-item:hover .gallery-caption {
+            opacity: 1;
+        }
+
+        /* ── Hidden filter state ── */
+        .gallery-item.hidden {
+            display: none;
+        }
+
+        /* ── Lightbox ── */
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.92);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .lightbox.open {
+            display: flex;
+        }
+        .lightbox-inner {
+            position: relative;
+            max-width: 90vw;
+            max-height: 88vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .lightbox-inner img {
+            max-width: 90vw;
+            max-height: 88vh;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+        }
+        .lightbox-close {
+            position: fixed;
+            top: 20px;
+            right: 24px;
+            background: rgba(255,255,255,0.15);
+            border: none;
+            color: #fff;
+            font-size: 1.6rem;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+        .lightbox-close:hover { background: rgba(255,255,255,0.3); }
+        .lightbox-nav {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.12);
+            border: none;
+            color: #fff;
+            font-size: 1.8rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+        .lightbox-nav:hover { background: rgba(0,206,209,0.6); }
+        .lightbox-prev { left: 16px; }
+        .lightbox-next { right: 16px; }
+        .lightbox-caption {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(255,255,255,0.8);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .lightbox-counter {
+            position: fixed;
+            top: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(255,255,255,0.5);
+            font-size: 0.8rem;
+        }
+
+        /* ── CTA at bottom ── */
+        .gallery-cta {
+            background: linear-gradient(135deg, #0a2342 0%, #00CED1 100%);
+            padding: 70px 20px;
+            text-align: center;
+            color: #fff;
+        }
+        .gallery-cta h2 { color: #fff; margin-bottom: 0.75rem; }
+        .gallery-cta p { opacity: 0.9; font-size: 1.1rem; margin-bottom: 2rem; }
+        .gallery-cta .btn { margin: 0 8px; }
+    </style>
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <!-- HERO -->
+    <section class="gallery-hero">
+        <div class="container">
+            <h1>Our Clinic &amp; Facilities</h1>
+            <p>Take a virtual tour of Thrive 4 Peak Performance — where cutting-edge technology meets physician-led care in Alpharetta, GA</p>
+        </div>
+    </section>
+
+    <!-- FILTER TABS -->
+    <div class="gallery-filters">
+        <ul class="filter-list">
+            <li><button class="filter-btn active" data-filter="all">All Photos</button></li>
+            <li><button class="filter-btn" data-filter="clinic">Clinic &amp; Lobby</button></li>
+            <li><button class="filter-btn" data-filter="iv">IV Therapy</button></li>
+            <li><button class="filter-btn" data-filter="hyperbaric">Hyperbaric</button></li>
+            <li><button class="filter-btn" data-filter="hocatt">HOCATT Sauna</button></li>
+            <li><button class="filter-btn" data-filter="cryo">Cryotherapy</button></li>
+            <li><button class="filter-btn" data-filter="redlight">Red Light</button></li>
+            <li><button class="filter-btn" data-filter="team">Team</button></li>
+        </ul>
+    </div>
+
+    <!-- GALLERY GRID -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-grid" id="galleryGrid">
+
+                <!-- CLINIC / LOBBY -->
+                <div class="gallery-item" data-category="clinic" data-caption="Main Lobby — Alpharetta">
+                    <img src="/images/DSC_3318.jpg" alt="Thrive 4 Peak Performance main lobby waiting area in Alpharetta GA" loading="lazy">
+                    <div class="gallery-caption">Main Lobby</div>
+                </div>
+
+                <div class="gallery-item" data-category="clinic" data-caption="Lobby &amp; Hyperbaric Suite">
+                    <img src="/images/DSC_3313.jpg" alt="Thrive clinic lobby with THRIVE-branded hyperbaric chamber visible through doorway" loading="lazy">
+                    <div class="gallery-caption">Lobby &amp; Hyperbaric Suite</div>
+                </div>
+
+                <div class="gallery-item" data-category="clinic" data-caption="Reception Lounge">
+                    <img src="/images/DSC_3331.jpg" alt="Thrive 4 Peak Performance reception lounge with premium leather chairs and chandelier" loading="lazy">
+                    <div class="gallery-caption">Reception Lounge</div>
+                </div>
+
+                <div class="gallery-item" data-category="clinic" data-caption="Saltwater Reef Aquarium">
+                    <img src="/images/DSC_3535.jpg" alt="Reception area with large saltwater reef aquarium at Thrive 4 wellness clinic Alpharetta" loading="lazy">
+                    <div class="gallery-caption">Reception Area</div>
+                </div>
+
+                <div class="gallery-item" data-category="clinic" data-caption="Saltwater Reef Detail">
+                    <img src="/images/DSC_3538.jpg" alt="Close-up of colorful saltwater reef aquarium in Thrive 4 clinic lobby" loading="lazy">
+                    <div class="gallery-caption">Saltwater Reef</div>
+                </div>
+
+                <div class="gallery-item" data-category="clinic" data-caption="Clinic Exterior">
+                    <img src="/images/IMG_0113.jpeg" alt="Exterior entrance of Thrive 4 Peak Performance clinic in Alpharetta GA" loading="lazy">
+                    <div class="gallery-caption">Our Location</div>
+                </div>
+
+                <!-- IV THERAPY -->
+                <div class="gallery-item" data-category="iv" data-caption="IV Therapy Suite">
+                    <img src="/images/DSC_3185.jpg" alt="IV therapy suite at Thrive 4 Peak Performance — nurse with patient in treatment room" loading="lazy">
+                    <div class="gallery-caption">IV Therapy Suite</div>
+                </div>
+
+                <div class="gallery-item tall" data-category="iv" data-caption="IV Therapy Session">
+                    <img src="/images/DSC_3229.jpg" alt="Nurse administering IV drip therapy to smiling patient in Alpharetta wellness clinic" loading="lazy">
+                    <div class="gallery-caption">IV Therapy Session</div>
+                </div>
+
+                <div class="gallery-item" data-category="iv" data-caption="IV Infusion Room">
+                    <img src="/images/DSC_3521.jpg" alt="IV therapy infusion room with recliner chair and IV stand at Thrive 4 Peak Performance" loading="lazy">
+                    <div class="gallery-caption">IV Infusion Room</div>
+                </div>
+
+                <!-- HYPERBARIC -->
+                <div class="gallery-item" data-category="hyperbaric" data-caption="Hyperbaric Oxygen Chamber">
+                    <img src="/images/DSC_3249.jpg" alt="THRIVE-branded hyperbaric oxygen therapy chamber with patient inside in Alpharetta GA" loading="lazy">
+                    <div class="gallery-caption">Hyperbaric Oxygen Therapy</div>
+                </div>
+
+                <div class="gallery-item" data-category="hyperbaric" data-caption="Hyperbaric — Blue Light Therapy">
+                    <img src="/images/DSC_3265.jpg" alt="Patient relaxing during hyperbaric oxygen therapy session with blue light at Thrive 4" loading="lazy">
+                    <div class="gallery-caption">Hyperbaric Session</div>
+                </div>
+
+                <div class="gallery-item" data-category="hyperbaric" data-caption="Hyperbaric Suite">
+                    <img src="/images/DSC_3332.jpg" alt="Hyperbaric oxygen therapy suite with THRIVE-branded chamber against blue accent wall" loading="lazy">
+                    <div class="gallery-caption">Hyperbaric Suite</div>
+                </div>
+
+                <!-- HOCATT -->
+                <div class="gallery-item" data-category="hocatt" data-caption="HOCATT Ozone Sauna Room">
+                    <img src="/images/DSC_3382.jpg" alt="HOCATT ozone sauna treatment room at Thrive 4 Peak Performance Alpharetta" loading="lazy">
+                    <div class="gallery-caption">HOCATT Ozone Sauna Room</div>
+                </div>
+
+                <div class="gallery-item tall" data-category="hocatt" data-caption="HOCATT Session">
+                    <img src="/images/DSC_3283.jpg" alt="Patient in HOCATT full-body ozone sauna with head above chamber at Thrive 4 Alpharetta" loading="lazy">
+                    <div class="gallery-caption">HOCATT Session</div>
+                </div>
+
+                <div class="gallery-item" data-category="hocatt" data-caption="HOCATT — Team Assist">
+                    <img src="/images/DSC_3298.jpg" alt="Medical staff assisting patient into HOCATT ozone sauna at Thrive 4 wellness clinic" loading="lazy">
+                    <div class="gallery-caption">Assisted HOCATT Entry</div>
+                </div>
+
+                <div class="gallery-item" data-category="hocatt" data-caption="HOCATT Consultation">
+                    <img src="/images/DSC_3304.jpg" alt="One-on-one HOCATT therapy consultation and monitoring at Thrive 4 Peak Performance" loading="lazy">
+                    <div class="gallery-caption">HOCATT Consultation</div>
+                </div>
+
+                <!-- CRYOTHERAPY -->
+                <div class="gallery-item tall" data-category="cryo" data-caption="Cryotherapy — Blue Glow">
+                    <img src="/images/DSC_3355.jpg" alt="Whole-body cryotherapy session with dramatic blue glow at Thrive 4 Peak Performance Alpharetta" loading="lazy">
+                    <div class="gallery-caption">Cryotherapy Session</div>
+                </div>
+
+                <div class="gallery-item tall" data-category="cryo" data-caption="Cryotherapy — Staff Monitoring">
+                    <img src="/images/DSC_3365.jpg" alt="Medical staff monitoring patient during whole-body cryotherapy at Thrive 4 Alpharetta GA" loading="lazy">
+                    <div class="gallery-caption">Supervised Cryotherapy</div>
+                </div>
+
+                <div class="gallery-item tall" data-category="cryo" data-caption="Cryotherapy — Female Patient">
+                    <img src="/images/DSC_3404.jpg" alt="Female patient in cryotherapy chamber with medical staff supervision at Thrive 4 Alpharetta" loading="lazy">
+                    <div class="gallery-caption">Cryotherapy</div>
+                </div>
+
+                <!-- RED LIGHT -->
+                <div class="gallery-item" data-category="redlight" data-caption="Red Light Therapy Bed">
+                    <img src="/images/DSC_3460.jpg" alt="Red light therapy bed at Thrive 4 Peak Performance in Alpharetta GA" loading="lazy">
+                    <div class="gallery-caption">Red Light Therapy</div>
+                </div>
+
+                <!-- TEAM / PHYSICIAN -->
+                <div class="gallery-item" data-category="team" data-caption="Our Medical Team">
+                    <img src="/images/Thrive-alpharetta-ivtherapy.jpg" alt="Thrive 4 Peak Performance physician and patients in clinic lobby in Alpharetta GA" loading="lazy">
+                    <div class="gallery-caption">Our Medical Team</div>
+                </div>
+
+                <!-- DETAILS / AMENITIES -->
+                <div class="gallery-item" data-category="clinic" data-caption="Medical Treatment Room">
+                    <img src="/images/DSC_3619.jpg" alt="Medical consultation and treatment room at Thrive 4 Peak Performance Alpharetta" loading="lazy">
+                    <div class="gallery-caption">Medical Treatment Room</div>
+                </div>
+
+                <div class="gallery-item" data-category="clinic" data-caption="Treatment Room Details">
+                    <img src="/images/DSC_3383.jpg" alt="Clean towels and amenities in HOCATT treatment room at Thrive 4 wellness clinic" loading="lazy">
+                    <div class="gallery-caption">Treatment Room</div>
+                </div>
+
+                <div class="gallery-item tall" data-category="clinic" data-caption="Thrive Branding">
+                    <img src="/images/DSC_3387.jpg" alt="THRIVE branded mirrored box and clinic details at Thrive 4 Peak Performance Alpharetta" loading="lazy">
+                    <div class="gallery-caption">Thrive Branding</div>
+                </div>
+
+                <div class="gallery-item" data-category="clinic" data-caption="Clinic Details">
+                    <img src="/images/DSC_3388.jpg" alt="Athletic sculpture and clean towels displaying the performance ethos at Thrive 4 Alpharetta" loading="lazy">
+                    <div class="gallery-caption">Clinic Details</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">&#10005;</button>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">&#8249;</button>
+        <div class="lightbox-inner">
+            <img src="" alt="" id="lightboxImg">
+        </div>
+        <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">&#8250;</button>
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+        <div class="lightbox-counter" id="lightboxCounter"></div>
+    </div>
+
+    <!-- CTA -->
+    <section class="gallery-cta">
+        <div class="container">
+            <h2>Ready to Experience It in Person?</h2>
+            <p>Most appointments available within 48 hours. Initial consultations are complimentary.</p>
+            <a href="/book-appointment.html" class="btn btn-primary btn-lg">Book Your Free Consultation</a>
+            <a href="tel:4703596195" class="btn btn-secondary btn-lg">Call (470) 359-6195</a>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Load header & footer
+        fetch('/header.html').then(r => r.text()).then(d => {
+            document.getElementById('header-placeholder').innerHTML = d;
+            if (typeof initMobileMenu === 'function') initMobileMenu();
+        });
+        fetch('/footer.html').then(r => r.text()).then(d => {
+            document.getElementById('footer-placeholder').innerHTML = d;
+        });
+
+        // ── Filter Logic ──
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.dataset.filter;
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.dataset.category === filter) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+                updateVisibleItems();
+            });
+        });
+
+        // ── Lightbox Logic ──
+        let visibleItems = [];
+        let currentIndex = 0;
+
+        function updateVisibleItems() {
+            visibleItems = Array.from(document.querySelectorAll('.gallery-item:not(.hidden)'));
+        }
+
+        function openLightbox(index) {
+            currentIndex = index;
+            const item = visibleItems[currentIndex];
+            const img = item.querySelector('img');
+            document.getElementById('lightboxImg').src = img.src;
+            document.getElementById('lightboxImg').alt = img.alt;
+            document.getElementById('lightboxCaption').textContent = item.dataset.caption || '';
+            document.getElementById('lightboxCounter').textContent = (currentIndex + 1) + ' / ' + visibleItems.length;
+            document.getElementById('lightbox').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        function navigate(direction) {
+            currentIndex = (currentIndex + direction + visibleItems.length) % visibleItems.length;
+            openLightbox(currentIndex);
+        }
+
+        updateVisibleItems();
+
+        galleryItems.forEach((item, i) => {
+            item.addEventListener('click', () => {
+                updateVisibleItems();
+                const idx = visibleItems.indexOf(item);
+                if (idx !== -1) openLightbox(idx);
+            });
+        });
+
+        document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+        document.getElementById('lightboxPrev').addEventListener('click', () => navigate(-1));
+        document.getElementById('lightboxNext').addEventListener('click', () => navigate(1));
+
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) closeLightbox();
+        });
+
+        document.addEventListener('keydown', e => {
+            if (!document.getElementById('lightbox').classList.contains('open')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') navigate(-1);
+            if (e.key === 'ArrowRight') navigate(1);
+        });
+    </script>
+
+</body>
+</html>
