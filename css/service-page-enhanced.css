@@ -32,7 +32,10 @@ body section:nth-of-type(5) .trust-grid > div {
 }
 
 body section:nth-of-type(5) .trust-card h3,
-body section:nth-of-type(5) .trust-card p {
+body section:nth-of-type(5) .trust-card p,
+body section:nth-of-type(5) .for-column h3,
+body section:nth-of-type(5) .for-column p,
+body section:nth-of-type(5) .for-column li {
     color: #1a1a1a !important;
 }
 
