@@ -1,0 +1,13 @@
+# Robots.txt for Thrive 4 Peak Performance
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.thrive4peakperformance.com/sitemap.xml
+
+# Disallow admin/config files (if any)
+Disallow: /admin/
+Disallow: /*.php$
+
+# Allow all search engines to crawl everything

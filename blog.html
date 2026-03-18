@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wellness tips, health insights, and recovery strategies from the medical team at Thrive 4 Peak Performance.">
+    <meta name="keywords" content="wellness blog, health tips, IV therapy blog, recovery tips">
+    
+    <title>Blog | Thrive 4 Peak Performance</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#00CED1">
+    
+    <link rel="stylesheet" href="css/styles-updated.css">
+</head>
+<body>
+    
+    <div id="header-placeholder"></div>
+    
+    <!-- HERO SECTION -->
+    <section class="hero" style="min-height: 400px;">
+        <div class="hero-background">
+            <img src="images/blog-hero.jpg" alt="Thrive blog">
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Wellness Insights & Tips</h1>
+                <p class="hero-subtitle">Evidence-based health advice from our medical team</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- BLOG COMING SOON -->
+    <section class="trust-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Blog Coming Soon</h2>
+                <p>We're currently developing valuable content on wellness, recovery, and performance optimization. Check back soon for expert insights from our medical team.</p>
+            </div>
+            
+            <div style="max-width: 800px; margin: 3rem auto; text-align: center;">
+                <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Topics We'll Cover:</h3>
+                <div class="trust-grid" style="text-align: left;">
+                    <div class="trust-card">
+                        <h4 style="color: #00CED1; margin-bottom: 0.5rem;">IV Therapy</h4>
+                        <p style="font-size: 1rem;">NAD+ benefits, vitamin optimization, hydration science</p>
+                    </div>
+                    
+                    <div class="trust-card">
+                        <h4 style="color: #00CED1; margin-bottom: 0.5rem;">Recovery</h4>
+                        <p style="font-size: 1rem;">Cryotherapy protocols, hyperbaric benefits, inflammation reduction</p>
+                    </div>
+                    
+                    <div class="trust-card">
+                        <h4 style="color: #00CED1; margin-bottom: 0.5rem;">Performance</h4>
+                        <p style="font-size: 1rem;">Athletic optimization, peptides, cellular health</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SUBSCRIBE -->
+    <section class="conversion-section">
+        <div class="container">
+            <div class="conversion-content">
+                <h2>Get Notified When We Launch</h2>
+                <p>Subscribe to our newsletter to receive our latest articles and wellness tips</p>
+                <form class="newsletter-form" action="#" method="POST" style="max-width: 600px; margin: 2rem auto;">
+                    <input type="email" name="email" placeholder="E-Mail Address" required aria-label="Email Address" style="flex: 1; padding: 16px 24px; border: 2px solid rgba(255, 255, 255, 0.3); border-radius: 8px; background-color: rgba(255, 255, 255, 0.1); color: #FFFFFF; font-size: 1.0625rem;">
+                    <button type="submit" class="btn btn-primary" style="padding: 16px 40px; white-space: nowrap;">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <div id="footer-placeholder"></div>
+    
+    <!-- Load Header and Footer -->
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                if (typeof initMobileMenu === 'function') {
+                    initMobileMenu();
+                }
+            });
+        
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+    <script src="js/main.js"></script>
+    
+</body>
+</html>

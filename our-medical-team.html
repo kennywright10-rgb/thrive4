@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet our board-certified physicians and licensed medical team at Thrive 4 Peak Performance in Alpharetta, GA.">
+    <meta name="keywords" content="medical team, physicians, doctors, licensed nurses, Alpharetta">
+    
+    <title>Our Medical Team | Thrive 4 Peak Performance</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#00CED1">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FQN6ZGY0P9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-FQN6ZGY0P9', {
+            'send_page_view': true,
+            'allow_google_signals': true,
+            'allow_ad_personalization_signals': true
+        });
+        
+        // Track phone clicks
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
+                el.addEventListener('click', function() {
+                    gtag('event', 'phone_click', {
+                        'event_category': 'engagement',
+                        'event_label': 'Phone Number Click'
+                    });
+                });
+            });
+            
+            // Track email clicks
+            document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
+                el.addEventListener('click', function() {
+                    gtag('event', 'email_click', {
+                        'event_category': 'engagement',
+                        'event_label': 'Email Click'
+                    });
+                });
+            });
+            
+            // Track CTA button clicks
+            document.querySelectorAll('.btn-primary, .cta-button').forEach(function(el) {
+                el.addEventListener('click', function() {
+                    gtag('event', 'cta_click', {
+                        'event_category': 'engagement',
+                        'event_label': el.textContent.trim(),
+                        'value': 1
+                    });
+                });
+            });
+        });
+    </script>
+    
+    <link rel="stylesheet" href="css/styles-updated.css">
+</head>
+<body>
+    
+    <div id="header-placeholder"></div>
+    
+    <!-- HERO SECTION -->
+    <section class="hero" style="min-height: 400px;">
+        <div class="hero-background">
+            <img src="images/team-hero.jpg" alt="Thrive medical team">
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">THRIVE Medical Director</h1>
+                <p class="hero-subtitle"></p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- TEAM INTRO -->
+    <section class="trust-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Dr. Lori Martin, M.D.</h2>
+                <p>Dr Martin brings decades of  experience in functional medicine, sports performance, and clinical practice. She is committed to evidence-based care and exceptional patient outcomes.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CREDENTIALS -->
+    <section class="how-it-works" style="background-color: #F9FAFB;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Credentials & Training</h2>
+            </div>
+            
+            <div class="trust-grid">
+                <div class="trust-card">
+                    <h3>Board Certifications</h3>
+                    <p>All physicians are board-certified in their specialties with active medical licenses in the state of Georgia.</p>
+                </div>
+                
+                <div class="trust-card">
+                    <h3>Continuing Education</h3>
+                    <p>Our team regularly attends conferences and training in functional medicine, peptide therapy, and performance optimization.</p>
+                </div>
+                
+                <div class="trust-card">
+                    <h3>Clinical Protocols</h3>
+                    <p>We follow evidence-based protocols developed from peer-reviewed research and clinical best practices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA SECTION -->
+    <section class="conversion-section">
+        <div class="container">
+            <div class="conversion-content">
+                <h2>Schedule Your Consultation</h2>
+                <p>Meet with our medical team to discuss your health goals</p>
+                <a href="book-appointment.html" class="btn btn-primary btn-lg">Book Appointment</a>
+                <p class="conversion-note">Or call us at <a href="tel:4703596195" style="color: #00CED1; text-decoration: underline;">(470) 359-6195</a></p>
+            </div>
+        </div>
+    </section>
+    
+    <div id="footer-placeholder"></div>
+    
+    <!-- Load Header and Footer -->
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                if (typeof initMobileMenu === 'function') {
+                    initMobileMenu();
+                }
+            });
+        
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+    <script src="js/main.js"></script>
+    
+</body>
+</html>
