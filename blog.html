@@ -3,102 +3,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Wellness tips, health insights, and recovery strategies from the medical team at Thrive 4 Peak Performance.">
-    <meta name="keywords" content="wellness blog, health tips, IV therapy blog, recovery tips">
-    
-    <title>Blog | Thrive 4 Peak Performance</title>
-    
-    <!-- Favicons -->
+    <meta name="description" content="Evidence-based wellness insights from the medical team at Thrive 4 Peak Performance in Alpharetta, GA. IV therapy, cryotherapy, peptides, and performance optimization.">
+    <meta name="keywords" content="wellness blog, IV therapy, cryotherapy, peptide therapy, NAD+, recovery, Alpharetta GA">
+    <title>Wellness Blog | Thrive 4 Peak Performance Alpharetta</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#00CED1">
-    
+    <link rel="canonical" href="https://thrive4peakperformance.com/blog.html">
     <link rel="stylesheet" href="css/styles-updated.css">
+    <style>
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .blog-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,74,173,0.08);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+            border: 1px solid #e5e7eb;
+        }
+        .blog-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 32px rgba(0,206,209,0.2);
+            border-color: #00CED1;
+        }
+        .blog-card-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+        .blog-card-body {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .blog-card-tag {
+            display: inline-block;
+            background: #E8F4FF;
+            color: #004aad;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.07em;
+            text-transform: uppercase;
+            padding: 0.25rem 0.7rem;
+            border-radius: 20px;
+            margin-bottom: 0.85rem;
+        }
+        .blog-card h3 {
+            font-size: 1.2rem;
+            color: #1a1a1a;
+            line-height: 1.35;
+            margin-bottom: 0.75rem;
+        }
+        .blog-card p {
+            font-size: 0.9375rem;
+            color: #6b7280;
+            line-height: 1.65;
+            flex: 1;
+            margin-bottom: 1.25rem;
+        }
+        .blog-card-meta {
+            font-size: 0.8rem;
+            color: #9ca3af;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+        .blog-card-meta span { display: flex; align-items: center; gap: 0.3rem; }
+        .read-more {
+            color: #004aad;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            transition: gap 0.2s ease;
+        }
+        .blog-card:hover .read-more { gap: 0.6rem; color: #00CED1; }
+        .featured-card {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .featured-card .blog-card-img {
+            height: 100%;
+            min-height: 280px;
+        }
+        .featured-card .blog-card-body {
+            padding: 2.5rem;
+            justify-content: center;
+        }
+        .featured-card h3 {
+            font-size: 1.55rem;
+        }
+        @media (max-width: 768px) {
+            .featured-card { grid-template-columns: 1fr; }
+            .featured-card .blog-card-img { height: 220px; }
+            .blog-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
-    
     <div id="header-placeholder"></div>
-    
-    <!-- HERO SECTION -->
-    <section class="hero" style="min-height: 400px;">
+
+    <!-- HERO -->
+    <section class="hero" style="min-height: 380px;">
         <div class="hero-background">
-            <img src="images/blog-hero.jpg" alt="Thrive blog">
+            <img src="images/blog-hero.jpg" alt="Thrive 4 Peak Performance wellness blog Alpharetta GA">
         </div>
         <div class="container">
             <div class="hero-content">
-                <h1>Wellness Insights & Tips</h1>
-                <p class="hero-subtitle">Evidence-based health advice from our medical team</p>
+                <h1>Wellness Insights &amp; Performance Science</h1>
+                <p class="hero-subtitle">Evidence-based health guidance from our physician team in Alpharetta, GA</p>
             </div>
         </div>
     </section>
-    
-    <!-- BLOG COMING SOON -->
-    <section class="trust-section">
+
+    <!-- BLOG POSTS -->
+    <section class="trust-section" style="background: #f8fafc;">
         <div class="container">
             <div class="section-header">
-                <h2>Blog Coming Soon</h2>
-                <p>We're currently developing valuable content on wellness, recovery, and performance optimization. Check back soon for expert insights from our medical team.</p>
+                <h2>Latest Articles</h2>
+                <p>Physician-authored content on IV therapy, peptides, cryotherapy, and performance optimization</p>
             </div>
-            
-            <div style="max-width: 800px; margin: 3rem auto; text-align: center;">
-                <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Topics We'll Cover:</h3>
-                <div class="trust-grid" style="text-align: left;">
-                    <div class="trust-card">
-                        <h4 style="color: #00CED1; margin-bottom: 0.5rem;">IV Therapy</h4>
-                        <p style="font-size: 1rem;">NAD+ benefits, vitamin optimization, hydration science</p>
+
+            <div class="blog-grid">
+
+                <!-- FEATURED: Recovery Stack -->
+                <a href="blog/recovery-biohacking-stack.html" class="blog-card featured-card">
+                    <img src="images/service-hocatt.jpg" alt="Recovery and performance optimization stack" class="blog-card-img">
+                    <div class="blog-card-body">
+                        <span class="blog-card-tag">Recovery &amp; Performance</span>
+                        <div class="blog-card-meta">
+                            <span>March 2026</span>
+                            <span>· 9 min read</span>
+                        </div>
+                        <h3>The Performance Recovery Stack: How to Combine HOCATT, Cryotherapy, Red Light, and Peptides</h3>
+                        <p>The gap between elite performers and the rest isn't primarily effort — it's recovery speed and quality. Here's how to stack Thrive 4's modalities for maximum synergistic effect.</p>
+                        <span class="read-more">Read Article →</span>
                     </div>
-                    
-                    <div class="trust-card">
-                        <h4 style="color: #00CED1; margin-bottom: 0.5rem;">Recovery</h4>
-                        <p style="font-size: 1rem;">Cryotherapy protocols, hyperbaric benefits, inflammation reduction</p>
+                </a>
+
+                <!-- IV Therapy -->
+                <a href="blog/iv-therapy-benefits-alpharetta.html" class="blog-card">
+                    <img src="images/service-iv-therapy.jpg" alt="IV therapy benefits vs oral supplements" class="blog-card-img">
+                    <div class="blog-card-body">
+                        <span class="blog-card-tag">IV Therapy</span>
+                        <div class="blog-card-meta">
+                            <span>March 2026</span>
+                            <span>· 7 min read</span>
+                        </div>
+                        <h3>Why IV Therapy Works Better Than Oral Supplements for Recovery</h3>
+                        <p>Most of what you swallow never reaches your cells. IV therapy delivers nutrients at near-100% bioavailability — bypassing the digestive system entirely.</p>
+                        <span class="read-more">Read Article →</span>
                     </div>
-                    
-                    <div class="trust-card">
-                        <h4 style="color: #00CED1; margin-bottom: 0.5rem;">Performance</h4>
-                        <p style="font-size: 1rem;">Athletic optimization, peptides, cellular health</p>
+                </a>
+
+                <!-- Cryotherapy -->
+                <a href="blog/cryotherapy-benefits-athletes.html" class="blog-card">
+                    <img src="images/service-cryo.jpg" alt="What happens during whole-body cryotherapy" class="blog-card-img">
+                    <div class="blog-card-body">
+                        <span class="blog-card-tag">Cryotherapy</span>
+                        <div class="blog-card-meta">
+                            <span>March 2026</span>
+                            <span>· 8 min read</span>
+                        </div>
+                        <h3>What Happens to Your Body During Whole-Body Cryotherapy</h3>
+                        <p>Three minutes at -110°C triggers a cascade of physiological responses: norepinephrine surges 800%, inflammation drops, and your body enters accelerated recovery mode.</p>
+                        <span class="read-more">Read Article →</span>
                     </div>
-                </div>
+                </a>
+
+                <!-- Peptide Therapy -->
+                <a href="blog/peptide-therapy-guide-bpc157.html" class="blog-card">
+                    <img src="images/service-peptides.jpg" alt="Peptide therapy guide BPC-157 TB-500 CJC-1295" class="blog-card-img">
+                    <div class="blog-card-body">
+                        <span class="blog-card-tag">Peptide Therapy</span>
+                        <div class="blog-card-meta">
+                            <span>March 2026</span>
+                            <span>· 10 min read</span>
+                        </div>
+                        <h3>BPC-157, TB-500 &amp; CJC-1295: The Complete Physician's Guide to Peptide Therapy</h3>
+                        <p>A detailed breakdown of the most clinically validated therapeutic peptides — what each one does, who benefits, and how protocols are structured.</p>
+                        <span class="read-more">Read Article →</span>
+                    </div>
+                </a>
+
+                <!-- NAD+ -->
+                <a href="blog/nad-plus-iv-therapy-anti-aging.html" class="blog-card">
+                    <img src="images/Thrive-alpharetta-ivtherapy.jpg" alt="NAD+ IV therapy anti-aging Alpharetta" class="blog-card-img">
+                    <div class="blog-card-body">
+                        <span class="blog-card-tag">IV Therapy · Anti-Aging</span>
+                        <div class="blog-card-meta">
+                            <span>March 2026</span>
+                            <span>· 8 min read</span>
+                        </div>
+                        <h3>NAD+ IV Therapy: The Anti-Aging Molecule Behind Peak Performance</h3>
+                        <p>NAD+ levels drop 50% by age 60. IV infusions are the only delivery method that meaningfully restores them — improving energy, DNA repair, and cellular longevity.</p>
+                        <span class="read-more">Read Article →</span>
+                    </div>
+                </a>
+
             </div>
         </div>
     </section>
-    
-    <!-- SUBSCRIBE -->
+
+    <!-- CTA -->
     <section class="conversion-section">
         <div class="container">
             <div class="conversion-content">
-                <h2>Get Notified When We Launch</h2>
-                <p>Subscribe to our newsletter to receive our latest articles and wellness tips</p>
-                <form class="newsletter-form" action="#" method="POST" style="max-width: 600px; margin: 2rem auto;">
-                    <input type="email" name="email" placeholder="E-Mail Address" required aria-label="Email Address" style="flex: 1; padding: 16px 24px; border: 2px solid rgba(255, 255, 255, 0.3); border-radius: 8px; background-color: rgba(255, 255, 255, 0.1); color: #FFFFFF; font-size: 1.0625rem;">
-                    <button type="submit" class="btn btn-primary" style="padding: 16px 40px; white-space: nowrap;">Subscribe</button>
-                </form>
+                <h2>Ready to Optimize Your Performance?</h2>
+                <p>Schedule a consultation with our medical team in Alpharetta and build a protocol designed for your goals.</p>
+                <a href="tel:(470) 359-6195" class="btn btn-primary btn-lg">Call (470) 359-6195</a>
             </div>
+            <p class="cta-address">Thrive 4 Peak Performance | 3568 Old Milton Pkwy, Alpharetta, GA 30005</p>
         </div>
     </section>
-    
+
     <div id="footer-placeholder"></div>
-    
-    <!-- Load Header and Footer -->
+
     <script>
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header-placeholder').innerHTML = data;
-                if (typeof initMobileMenu === 'function') {
-                    initMobileMenu();
-                }
-            });
-        
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer-placeholder').innerHTML = data;
-            });
+        fetch('header.html').then(r => r.text()).then(d => { document.getElementById('header-placeholder').innerHTML = d; if (typeof initMobileMenu === 'function') initMobileMenu(); });
+        fetch('footer.html').then(r => r.text()).then(d => { document.getElementById('footer-placeholder').innerHTML = d; });
     </script>
     <script src="js/main.js"></script>
-    
 </body>
 </html>
