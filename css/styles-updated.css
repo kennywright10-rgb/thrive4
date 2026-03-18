@@ -584,7 +584,10 @@ strong {
 
 .step {
     text-align: center;
-    position: relative;
+    padding: 2rem 1.5rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
 }
 
 .step-icon {
@@ -592,19 +595,18 @@ strong {
 }
 
 .step-number {
-    position: absolute;
-    top: -10px;
-    right: calc(50% - 80px);
-    width: 40px;
-    height: 40px;
-    background-color: #00CED1;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #00CED1 0%, #00B8BA 100%);
     color: #FFFFFF;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    font-size: 1.25rem;
+    font-size: 1.4rem;
+    margin: 0 auto 1.25rem auto;
+    box-shadow: 0 4px 12px rgba(0,206,209,0.35);
 }
 
 .step h3 {
@@ -1100,7 +1102,9 @@ strong {
     }
     
     .step-number {
-        right: calc(50% - 60px);
+        width: 44px;
+        height: 44px;
+        font-size: 1.2rem;
     }
     
     /* Testimonials Mobile */
