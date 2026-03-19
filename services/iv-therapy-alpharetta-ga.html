@@ -281,5 +281,61 @@
         });
     </script>
     
+
+    <!-- BreadcrumbList + LocalService Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.thrive4peakperformance.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.thrive4peakperformance.com/#services"},
+        {"@type": "ListItem", "position": 3, "name": "IV Therapy & NAD+ Infusions", "item": "https://www.thrive4peakperformance.com/services/iv-therapy-alpharetta-ga.html"}
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Thrive 4 Peak Performance",
+      "url": "https://www.thrive4peakperformance.com",
+      "telephone": "+14703596195",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "3568 Old Milton Pkwy",
+        "addressLocality": "Alpharetta",
+        "addressRegion": "GA",
+        "postalCode": "30005",
+        "addressCountry": "US"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "IV Therapy & NAD+ Infusions",
+        "itemListElement": [{
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "IV Therapy & NAD+ Infusions",
+            "description": "Physician-supervised IV therapy and NAD+ infusions in Alpharetta, GA for hydration, recovery, immune support, and anti-aging.",
+            "areaServed": [
+              {"@type": "City", "name": "Alpharetta", "containedInPlace": {"@type": "State", "name": "Georgia"}},
+              {"@type": "City", "name": "Milton", "containedInPlace": {"@type": "State", "name": "Georgia"}},
+              {"@type": "City", "name": "Roswell", "containedInPlace": {"@type": "State", "name": "Georgia"}},
+              {"@type": "City", "name": "Johns Creek", "containedInPlace": {"@type": "State", "name": "Georgia"}},
+              {"@type": "City", "name": "Cumming", "containedInPlace": {"@type": "State", "name": "Georgia"}}
+            ]
+          },
+          "priceCurrency": "USD",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": 150,
+            "maxPrice": 400,
+            "priceCurrency": "USD"
+          }
+        }]
+      }
+    }
+    </script>
 </body>
 </html>
