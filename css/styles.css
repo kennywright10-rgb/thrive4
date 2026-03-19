@@ -335,9 +335,39 @@ strong {
     color: #FFFFFF;
     font-size: 1.375rem;
     line-height: 1.6;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.25rem;
     opacity: 0.95;
     text-align: center;
+}
+
+.hero-closing {
+    color: #FFFFFF;
+    font-size: 1.125rem;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+    text-align: center;
+}
+
+.hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+}
+
+.hero-badge {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 2rem;
+    color: #FFFFFF;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+    backdrop-filter: blur(4px);
+    white-space: nowrap;
 }
 
 .hero-cta {
