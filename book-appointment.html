@@ -80,7 +80,12 @@
             <div class="booking-layout">
                 <!-- Form Column -->
                 <div class="form-column">
-                    <form id="bookingForm" class="booking-form" action="/thank-you/" method="POST">
+                    <form id="bookingForm" class="booking-form" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="3084231b-5609-4e36-848e-e9a8bdd77d95">
+                        <input type="hidden" name="subject" value="New Appointment Request — Thrive 4 Peak Performance">
+                        <input type="hidden" name="from_name" value="Thrive 4 Website">
+                        <input type="hidden" name="redirect" value="https://thrive4peakperformance.com/thank-you.html">
+                        <input type="checkbox" name="botcheck" style="display:none;">
                         <div class="form-group">
                             <label for="fullName">Full Name <span class="required">*</span></label>
                             <input 

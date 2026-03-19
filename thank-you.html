@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Thank You | Thrive 4 Peak Performance</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#00CED1">
+    <link rel="stylesheet" href="/css/styles-updated.css">
+    <style>
+        .thankyou-section {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #E8F4FF 0%, #F0F8FF 100%);
+            padding: 5rem 0;
+        }
+        .thankyou-box {
+            max-width: 620px;
+            margin: 0 auto;
+            text-align: center;
+            background: #fff;
+            border-radius: 20px;
+            padding: 3.5rem 2.5rem;
+            box-shadow: 0 8px 40px rgba(0,74,173,0.12);
+        }
+        .check-circle {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #00CED1, #00B8BA);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2.2rem;
+            color: #fff;
+        }
+        .thankyou-box h1 { color: #1a1a1a; font-size: 2rem; margin-bottom: 1rem; }
+        .thankyou-box p { color: #4A4A4A; font-size: 1.1rem; line-height: 1.7; margin-bottom: 1rem; }
+        .thankyou-box .next-steps { background: #f8fafc; border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; text-align: left; }
+        .thankyou-box .next-steps h3 { color: #004aad; font-size: 1.1rem; margin-bottom: 0.75rem; }
+        .thankyou-box .next-steps li { color: #374151; font-size: 1rem; line-height: 1.7; padding: 0.2rem 0; }
+        .btn-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <section class="thankyou-section">
+        <div class="container">
+            <div class="thankyou-box">
+                <div class="check-circle">✓</div>
+                <h1>Request Received!</h1>
+                <p>Thank you for reaching out to Thrive 4 Peak Performance. We've received your appointment request and will be in touch within <strong>2 business hours</strong>.</p>
+                <div class="next-steps">
+                    <h3>What happens next:</h3>
+                    <ul>
+                        <li>Our team will review your request and reach out by phone or email</li>
+                        <li>We'll confirm your preferred service and schedule a time</li>
+                        <li>Most appointments are available within 48 hours</li>
+                    </ul>
+                </div>
+                <p>Need to reach us sooner? Call us directly:</p>
+                <div class="btn-group">
+                    <a href="tel:(470) 359-6195" class="btn btn-primary">Call (470) 359-6195</a>
+                    <a href="/" class="btn btn-secondary">Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch('/header.html').then(r => r.text()).then(d => { document.getElementById('header-placeholder').innerHTML = d; if (typeof initMobileMenu === 'function') initMobileMenu(); });
+        fetch('/footer.html').then(r => r.text()).then(d => { document.getElementById('footer-placeholder').innerHTML = d; });
+    </script>
+    <script src="/js/main.js"></script>
+</body>
+</html>
