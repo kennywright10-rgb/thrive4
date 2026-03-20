@@ -374,49 +374,42 @@
         </div>
     </section>
 
-    <!-- Google Maps + Places API -->
+    <!-- Google Places API (New) — live reviews -->
     <script>
-    // ─── CONFIG — fill in these two values ──────────────────────────────────
-    var GOOGLE_PLACES_API_KEY = 'AIzaSyA5V6EmsTmoDO0CtR5TsJ9ankil0tRuJeI';
-    var GOOGLE_PLACE_ID       = 'ChIJ1wzHAuSf9YgR7Ip5Uj74sWM';
-    // ────────────────────────────────────────────────────────────────────────
+    var GOOGLE_PLACE_ID   = 'ChIJ1wzHAuSf9YgR7Ip5Uj74sWM';
+    var MAPS_REVIEW_URL   = 'https://www.google.com/maps/place/?q=place_id:' + GOOGLE_PLACE_ID;
 
-    var MAPS_REVIEW_URL = 'https://search.google.com/local/reviews?placeid=' + GOOGLE_PLACE_ID;
+    async function initGoogleReviews() {
+        try {
+            const { Place } = await google.maps.importLibrary('places');
+            const place = new Place({ id: GOOGLE_PLACE_ID, requestedLanguage: 'en' });
 
-    function initGoogleReviews() {
-        var el = document.createElement('div');
-        var service = new google.maps.places.PlacesService(el);
+            await place.fetchFields({
+                fields: ['displayName', 'rating', 'userRatingCount', 'reviews', 'googleMapsURI']
+            });
 
-        service.getDetails({
-            placeId: GOOGLE_PLACE_ID,
-            fields: ['name', 'rating', 'user_ratings_total', 'reviews', 'url']
-        }, function(place, status) {
-            if (status !== google.maps.places.PlacesServiceStatus.OK || !place) {
-                showFallback();
-                return;
-            }
             renderReviews(place);
-        });
+        } catch(e) {
+            console.error('Places API error:', e);
+            showFallback();
+        }
     }
 
     function renderReviews(place) {
         document.getElementById('reviews-loading').style.display = 'none';
 
-        // Rating summary
+        // Rating summary bar
         if (place.rating) {
-            var stars = '';
-            var full = Math.floor(place.rating);
-            for (var i = 0; i < full; i++) stars += '★';
+            var stars = '★'.repeat(Math.floor(place.rating));
             if (place.rating % 1 >= 0.5) stars += '½';
             document.getElementById('google-stars').textContent = stars;
             document.getElementById('google-score').textContent =
-                place.rating.toFixed(1) + ' / 5  (' + (place.user_ratings_total || '') + ' reviews)';
-            var link = place.url || MAPS_REVIEW_URL;
-            document.getElementById('google-review-link').href = link;
+                place.rating.toFixed(1) + ' / 5  (' + (place.userRatingCount || '') + ' reviews)';
+            document.getElementById('google-review-link').href = place.googleMapsURI || MAPS_REVIEW_URL;
             document.getElementById('google-rating-summary').style.display = 'flex';
         }
 
-        // Review cards — show 5-star reviews first, max 5 cards
+        // Review cards — 5-star first, max 5
         var reviews = (place.reviews || [])
             .sort(function(a, b) { return b.rating - a.rating; })
             .slice(0, 5);
@@ -427,21 +420,24 @@
         grid.innerHTML = '';
 
         reviews.forEach(function(r) {
-            var stars = '';
-            for (var i = 0; i < r.rating; i++) stars += '★';
+            var stars = '★'.repeat(r.rating);
+            var authorName = r.authorAttribution ? r.authorAttribution.displayName : 'Google Reviewer';
+            var photoUrl   = r.authorAttribution ? r.authorAttribution.photoURI : '';
+            var reviewText = r.text ? (r.text.text || '') : '';
+            var timeDesc   = r.relativePublishTimeDescription || '';
+
             var card = document.createElement('div');
             card.className = 'testimonial-card';
             card.innerHTML =
-                '<div class="testimonial-rating" style="color:#F5A623; font-size:1.1rem;">' + stars + '</div>' +
-                '<p class="testimonial-text">"' + escapeHtml(r.text) + '"</p>' +
+                '<div class="testimonial-rating" style="color:#F5A623;font-size:1.1rem;">' + stars + '</div>' +
+                '<p class="testimonial-text">"' + escapeHtml(reviewText) + '"</p>' +
                 '<div class="testimonial-author">' +
-                    '<img src="' + (r.profile_photo_url || '/images/default-avatar.png') + '" ' +
-                         'alt="' + escapeHtml(r.author_name) + '" ' +
-                         'class="testimonial-photo" ' +
-                         'onerror="this.src=\'/images/default-avatar.png\'">' +
+                    (photoUrl
+                        ? '<img src="' + escapeHtml(photoUrl) + '" alt="' + escapeHtml(authorName) + '" class="testimonial-photo" onerror="this.style.display=\'none\'">'
+                        : '') +
                     '<div>' +
-                        '<strong>' + escapeHtml(r.author_name) + '</strong>' +
-                        '<span>' + r.relative_time_description + '</span>' +
+                        '<strong>' + escapeHtml(authorName) + '</strong>' +
+                        '<span>' + escapeHtml(timeDesc) + '</span>' +
                     '</div>' +
                 '</div>';
             grid.appendChild(card);
@@ -460,7 +456,7 @@
         return (str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
     }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5V6EmsTmoDO0CtR5TsJ9ankil0tRuJeI&libraries=places&callback=initGoogleReviews" async defer></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5V6EmsTmoDO0CtR5TsJ9ankil0tRuJeI&v=weekly&callback=initGoogleReviews"></script>
     
     <div id="footer-placeholder"></div>
     
