@@ -344,52 +344,123 @@
         </div>
     </section>
     
-    <!-- TESTIMONIALS -->
-    <section class="testimonials-section">
+    <!-- GOOGLE REVIEWS (live) -->
+    <section class="testimonials-section" id="reviews">
         <div class="container">
             <div class="section-header">
                 <h2>What Our Patients Say</h2>
+                <div id="google-rating-summary" style="display:none; align-items:center; justify-content:center; gap:0.75rem; margin-top:0.5rem; flex-wrap:wrap;">
+                    <span id="google-stars" style="color:#F5A623; font-size:1.4rem; letter-spacing:2px;"></span>
+                    <span id="google-score" style="font-size:1.25rem; font-weight:700; color:#1a1a1a;"></span>
+                    <a id="google-review-link" href="#" target="_blank" rel="noopener" style="font-size:0.95rem; color:#00aab8; font-weight:600; text-decoration:none;">
+                        See all reviews on Google ↗
+                    </a>
+                </div>
             </div>
-            
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"After three months of IV therapy and red light sessions, my marathon recovery time dropped by 40%. The medical team here actually listens."</p>
-                    <div class="testimonial-author">
-                        <img src="/images/testimonial-1.jpg" alt="Sarah M. from Milton" class="testimonial-photo">
-                        <div>
-                            <strong>Sarah M.</strong>
-                            <span>Milton, GA</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"I was skeptical about HOCATT, but the physician walked me through the science. My chronic inflammation is finally under control."</p>
-                    <div class="testimonial-author">
-                        <img src="/images/testimonial-2.jpg" alt="David R. from Roswell" class="testimonial-photo">
-                        <div>
-                            <strong>David R.</strong>
-                            <span>Roswell, GA</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Best decision I made for my health this year. Real doctors, real results, none of the wellness industry BS."</p>
-                    <div class="testimonial-author">
-                        <img src="/images/testimonial-3.jpg" alt="Jennifer K. from Johns Creek" class="testimonial-photo">
-                        <div>
-                            <strong>Jennifer K.</strong>
-                            <span>Johns Creek, GA</span>
-                        </div>
-                    </div>
-                </div>
+
+            <!-- Loading state -->
+            <div id="reviews-loading" class="testimonials-grid" style="text-align:center; padding:2rem; color:#6B7280; grid-column:1/-1;">
+                Loading reviews…
+            </div>
+
+            <!-- Reviews will be injected here -->
+            <div id="reviews-grid" class="testimonials-grid" style="display:none;"></div>
+
+            <!-- Error / fallback -->
+            <div id="reviews-error" style="display:none; text-align:center; padding:2rem;">
+                <p style="color:#6B7280; margin-bottom:1rem;">Unable to load reviews right now.</p>
+                <a id="reviews-error-link" href="#" target="_blank" rel="noopener" class="btn btn-secondary">Read Our Google Reviews</a>
             </div>
         </div>
     </section>
+
+    <!-- Google Maps + Places API -->
+    <script>
+    // ─── CONFIG — fill in these two values ──────────────────────────────────
+    var GOOGLE_PLACES_API_KEY = 'YOUR_API_KEY_HERE';
+    var GOOGLE_PLACE_ID       = 'YOUR_PLACE_ID_HERE';
+    // ────────────────────────────────────────────────────────────────────────
+
+    var MAPS_REVIEW_URL = 'https://search.google.com/local/reviews?placeid=' + GOOGLE_PLACE_ID;
+
+    function initGoogleReviews() {
+        var el = document.createElement('div');
+        var service = new google.maps.places.PlacesService(el);
+
+        service.getDetails({
+            placeId: GOOGLE_PLACE_ID,
+            fields: ['name', 'rating', 'user_ratings_total', 'reviews', 'url']
+        }, function(place, status) {
+            if (status !== google.maps.places.PlacesServiceStatus.OK || !place) {
+                showFallback();
+                return;
+            }
+            renderReviews(place);
+        });
+    }
+
+    function renderReviews(place) {
+        document.getElementById('reviews-loading').style.display = 'none';
+
+        // Rating summary
+        if (place.rating) {
+            var stars = '';
+            var full = Math.floor(place.rating);
+            for (var i = 0; i < full; i++) stars += '★';
+            if (place.rating % 1 >= 0.5) stars += '½';
+            document.getElementById('google-stars').textContent = stars;
+            document.getElementById('google-score').textContent =
+                place.rating.toFixed(1) + ' / 5  (' + (place.user_ratings_total || '') + ' reviews)';
+            var link = place.url || MAPS_REVIEW_URL;
+            document.getElementById('google-review-link').href = link;
+            document.getElementById('google-rating-summary').style.display = 'flex';
+        }
+
+        // Review cards — show 5-star reviews first, max 5 cards
+        var reviews = (place.reviews || [])
+            .sort(function(a, b) { return b.rating - a.rating; })
+            .slice(0, 5);
+
+        if (!reviews.length) { showFallback(); return; }
+
+        var grid = document.getElementById('reviews-grid');
+        grid.innerHTML = '';
+
+        reviews.forEach(function(r) {
+            var stars = '';
+            for (var i = 0; i < r.rating; i++) stars += '★';
+            var card = document.createElement('div');
+            card.className = 'testimonial-card';
+            card.innerHTML =
+                '<div class="testimonial-rating" style="color:#F5A623; font-size:1.1rem;">' + stars + '</div>' +
+                '<p class="testimonial-text">"' + escapeHtml(r.text) + '"</p>' +
+                '<div class="testimonial-author">' +
+                    '<img src="' + (r.profile_photo_url || '/images/default-avatar.png') + '" ' +
+                         'alt="' + escapeHtml(r.author_name) + '" ' +
+                         'class="testimonial-photo" ' +
+                         'onerror="this.src=\'/images/default-avatar.png\'">' +
+                    '<div>' +
+                        '<strong>' + escapeHtml(r.author_name) + '</strong>' +
+                        '<span>' + r.relative_time_description + '</span>' +
+                    '</div>' +
+                '</div>';
+            grid.appendChild(card);
+        });
+
+        grid.style.display = 'grid';
+    }
+
+    function showFallback() {
+        document.getElementById('reviews-loading').style.display = 'none';
+        document.getElementById('reviews-error-link').href = MAPS_REVIEW_URL;
+        document.getElementById('reviews-error').style.display = 'block';
+    }
+
+    function escapeHtml(str) {
+        return (str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&libraries=places&callback=initGoogleReviews" async defer></script>
     
     <div id="footer-placeholder"></div>
     
