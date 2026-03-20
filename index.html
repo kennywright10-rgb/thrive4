@@ -359,12 +359,16 @@
             </div>
 
             <!-- Loading state -->
-            <div id="reviews-loading" class="testimonials-grid" style="text-align:center; padding:2rem; color:#6B7280; grid-column:1/-1;">
+            <div id="reviews-loading" style="text-align:center; padding:2rem; color:#6B7280;">
                 Loading reviews…
             </div>
 
-            <!-- Reviews will be injected here -->
-            <div id="reviews-grid" class="testimonials-grid" style="display:none;"></div>
+            <!-- Scrollable row wrapper -->
+            <div class="reviews-scroll-wrapper" style="display:none;" id="reviews-scroll-wrapper">
+                <button class="reviews-arrow reviews-arrow-left" id="reviews-prev" aria-label="Previous reviews">&#8592;</button>
+                <div id="reviews-grid" class="reviews-scroll-track"></div>
+                <button class="reviews-arrow reviews-arrow-right" id="reviews-next" aria-label="Next reviews">&#8594;</button>
+            </div>
 
             <!-- Error / fallback -->
             <div id="reviews-error" style="display:none; text-align:center; padding:2rem;">
@@ -409,10 +413,9 @@
             document.getElementById('google-rating-summary').style.display = 'flex';
         }
 
-        // Review cards — 5-star first, max 5
+        // Review cards — 5-star first, all reviews
         var reviews = (place.reviews || [])
-            .sort(function(a, b) { return b.rating - a.rating; })
-            .slice(0, 5);
+            .sort(function(a, b) { return b.rating - a.rating; });
 
         if (!reviews.length) { showFallback(); return; }
 
@@ -423,11 +426,11 @@
             var stars = '★'.repeat(r.rating);
             var authorName = r.authorAttribution ? r.authorAttribution.displayName : 'Google Reviewer';
             var photoUrl   = r.authorAttribution ? r.authorAttribution.photoURI : '';
-            var reviewText = r.text ? (r.text.text || '') : '';
+            var reviewText = typeof r.text === 'string' ? r.text : (r.text && r.text.text ? r.text.text : '');
             var timeDesc   = r.relativePublishTimeDescription || '';
 
             var card = document.createElement('div');
-            card.className = 'testimonial-card';
+            card.className = 'testimonial-card reviews-card';
             card.innerHTML =
                 '<div class="testimonial-rating" style="color:#F5A623;font-size:1.1rem;">' + stars + '</div>' +
                 '<p class="testimonial-text">"' + escapeHtml(reviewText) + '"</p>' +
@@ -443,7 +446,16 @@
             grid.appendChild(card);
         });
 
-        grid.style.display = 'grid';
+        document.getElementById('reviews-scroll-wrapper').style.display = 'flex';
+
+        // Wire up scroll arrows
+        var track = grid;
+        document.getElementById('reviews-prev').addEventListener('click', function() {
+            track.scrollBy({ left: -380, behavior: 'smooth' });
+        });
+        document.getElementById('reviews-next').addEventListener('click', function() {
+            track.scrollBy({ left: 380, behavior: 'smooth' });
+        });
     }
 
     function showFallback() {

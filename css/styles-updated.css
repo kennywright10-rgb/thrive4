@@ -1222,6 +1222,73 @@ textarea:focus {
     }
 }
 
+/* ==========================================
+   REVIEWS SCROLL ROW
+   ========================================== */
+
+.reviews-scroll-wrapper {
+    position: relative;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.reviews-scroll-track {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 0.5rem 0.25rem 1rem;
+    flex: 1;
+}
+
+.reviews-scroll-track::-webkit-scrollbar {
+    display: none;
+}
+
+.reviews-card {
+    flex: 0 0 340px;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.reviews-arrow {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid #00aab8;
+    background: #fff;
+    color: #00aab8;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, color 0.2s;
+    line-height: 1;
+}
+
+.reviews-arrow:hover {
+    background: #00aab8;
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    .reviews-card {
+        flex: 0 0 85vw;
+    }
+    .reviews-arrow {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+}
+
 /* Print Styles */
 @media print {
     .header,
