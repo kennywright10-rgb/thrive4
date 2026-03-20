@@ -730,6 +730,10 @@ strong {
     color: #1a1a1a;
     font-style: italic;
     margin-bottom: 1.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .testimonial-author {
