@@ -1,0 +1,262 @@
+<!-- ===================================================================
+     TRACKING CODES TEMPLATE - THRIVE PEAK PERFORMANCE
+     
+     INSTRUCTIONS:
+     1. Replace ALL placeholder IDs with your actual IDs
+     2. Add this code to the <head> section of header.html
+     3. The GTM noscript goes right after <body> tag
+     ==================================================================== -->
+
+<!-- OPTION 1: GOOGLE TAG MANAGER (RECOMMENDED) -->
+<!-- This manages ALL your tracking codes in one place -->
+
+<!-- Google Tag Manager - ADD TO <head> -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google Tag Manager (noscript) - ADD IMMEDIATELY AFTER <body> TAG -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- ===================================================================
+     OPTION 2: MANUAL TRACKING CODES (If not using GTM)
+     Add these to <head> section
+     ==================================================================== -->
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'YOUR_PIXEL_ID_HERE'); // Replace with your Meta Pixel ID
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID_HERE&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX'); // Replace with your GA4 Measurement ID
+</script>
+<!-- End Google Analytics 4 -->
+
+<!-- ===================================================================
+     CONVERSION TRACKING SCRIPTS
+     Add these to your main.js file or inline
+     ==================================================================== -->
+
+<script>
+// Phone Call Tracking
+function trackPhoneCall() {
+  // Google Analytics
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'phone_call', {
+      'event_category': 'engagement',
+      'event_label': 'header_phone',
+      'value': 1
+    });
+  }
+  
+  // Meta Pixel
+  if (typeof fbq !== 'undefined') {
+    fbq('track', 'Contact');
+  }
+  
+  // Google Tag Manager (if using GTM)
+  if (typeof dataLayer !== 'undefined') {
+    dataLayer.push({
+      'event': 'phone_call',
+      'call_location': 'header'
+    });
+  }
+}
+
+// Form Submission Tracking
+function trackFormSubmit(formName) {
+  // Google Analytics
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'form_submit', {
+      'event_category': 'engagement',
+      'event_label': formName,
+      'value': 1
+    });
+  }
+  
+  // Meta Pixel
+  if (typeof fbq !== 'undefined') {
+    fbq('track', 'Lead');
+  }
+  
+  // Google Tag Manager
+  if (typeof dataLayer !== 'undefined') {
+    dataLayer.push({
+      'event': 'form_submission',
+      'form_name': formName
+    });
+  }
+}
+
+// Book Appointment Tracking
+function trackAppointment() {
+  // Google Analytics
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'book_appointment', {
+      'event_category': 'conversion',
+      'event_label': 'appointment_form',
+      'value': 1
+    });
+  }
+  
+  // Meta Pixel
+  if (typeof fbq !== 'undefined') {
+    fbq('track', 'Schedule');
+  }
+  
+  // Google Tag Manager
+  if (typeof dataLayer !== 'undefined') {
+    dataLayer.push({
+      'event': 'appointment_booked',
+      'booking_type': 'online_form'
+    });
+  }
+}
+
+// Newsletter Signup Tracking
+function trackNewsletterSignup() {
+  // Google Analytics
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'newsletter_signup', {
+      'event_category': 'engagement',
+      'event_label': 'footer_newsletter'
+    });
+  }
+  
+  // Meta Pixel
+  if (typeof fbq !== 'undefined') {
+    fbq('track', 'Lead');
+  }
+  
+  // Google Tag Manager
+  if (typeof dataLayer !== 'undefined') {
+    dataLayer.push({
+      'event': 'newsletter_signup',
+      'signup_location': 'footer'
+    });
+  }
+}
+
+// Service Page View Tracking
+function trackServiceView(serviceName) {
+  // Google Analytics
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'view_item', {
+      'event_category': 'engagement',
+      'event_label': serviceName,
+      'items': [{
+        'item_name': serviceName,
+        'item_category': 'service'
+      }]
+    });
+  }
+  
+  // Meta Pixel
+  if (typeof fbq !== 'undefined') {
+    fbq('track', 'ViewContent', {
+      content_name: serviceName,
+      content_category: 'service'
+    });
+  }
+}
+</script>
+
+<!-- ===================================================================
+     HOW TO USE THESE TRACKING FUNCTIONS
+     ==================================================================== -->
+
+<!-- 
+EXAMPLE 1: Phone Number Link
+Replace all phone links with:
+
+<a href="tel:4703596195" onclick="trackPhoneCall();">(470) 359-6195</a>
+
+EXAMPLE 2: Contact Form
+Add to form submit:
+
+<form onsubmit="trackFormSubmit('contact_form'); return true;">
+
+EXAMPLE 3: Booking Form
+Add to booking form:
+
+<form onsubmit="trackAppointment(); return true;">
+
+EXAMPLE 4: Newsletter Form
+Add to newsletter form in footer.html:
+
+<form onsubmit="trackNewsletterSignup(); return true;">
+
+EXAMPLE 5: Service Page
+Add to service pages (in script section):
+
+<script>
+trackServiceView('IV Therapy Alpharetta');
+</script>
+-->
+
+<!-- ===================================================================
+     GOOGLE BUSINESS PROFILE - POST ATTRIBUTES
+     Add these data attributes to your schema markup
+     ==================================================================== -->
+
+<!--
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "THRIVE Peak Performance",
+  "image": "https://www.thrive4peakperformance.com/images/logo.png",
+  "url": "https://www.thrive4peakperformance.com",
+  "telephone": "+14703596195",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "3568 Old Milton Pkwy",
+    "addressLocality": "Alpharetta",
+    "addressRegion": "GA",
+    "postalCode": "30005",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "34.0883",
+    "longitude": "-84.2245"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "0"
+  }
+}
+-->
