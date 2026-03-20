@@ -359,15 +359,14 @@ strong {
 }
 
 .hero-badge {
-    background: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.92);
     border-radius: 2rem;
-    color: #FFFFFF;
-    font-size: 0.95rem;
-    font-weight: 600;
-    padding: 0.4rem 1rem;
-    backdrop-filter: blur(4px);
+    color: #0d4f5c;
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 0.45rem 1.1rem;
     white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
 }
 
 .hero-cta {
