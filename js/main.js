@@ -364,5 +364,5 @@ window.addEventListener('load', function() {
 // CONSOLE MESSAGE
 // ==========================================
 
-console.log('%c🚀 THRIVE Peak Performance', 'font-size: 20px; font-weight: bold; color: #0A5F5F;');
+console.log('%c🚀 THRIVE 4 Peak Performance', 'font-size: 20px; font-weight: bold; color: #0A5F5F;');
 console.log('%cWebsite loaded successfully!', 'font-size: 14px; color: #4A90A4;');
