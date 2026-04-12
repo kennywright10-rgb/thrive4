@@ -91,46 +91,69 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalBusiness",
-      "name": "THRIVE 4 Peak Performance",
-      "image": "/images/logo.png",
-      "url": "https://www.thrive4peakperformance.com",
-      "telephone": "+14703596195",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "3568 Old Milton Pkwy",
-        "addressLocality": "Alpharetta",
-        "addressRegion": "GA",
-        "postalCode": "30005",
-        "addressCountry": "US"
-      },
-      "areaServed": [
-        "Alpharetta, GA",
-        "Milton, GA",
-        "Roswell, GA",
-        "Johns Creek, GA",
-        "Cumming, GA",
-        "Duluth, GA",
-        "Sandy Springs, GA",
-        "East Cobb, GA",
-        "Marietta, GA",
-        "North Fulton County"
-      ],
-      "openingHoursSpecification": [
+      "@graph": [
         {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          "opens": "09:00",
-          "closes": "18:00"
+          "@type": ["LocalBusiness", "MedicalBusiness"],
+          "@id": "https://www.thrive4peakperformance.com/#business",
+          "name": "THRIVE 4 Peak Performance",
+          "url": "https://www.thrive4peakperformance.com",
+          "telephone": "(470) 359-6195",
+          "image": "https://www.thrive4peakperformance.com/images/logo.png",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.thrive4peakperformance.com/images/logo.png"
+          },
+          "description": "Physician-led wellness clinic in Alpharetta, GA offering IV therapy, cryotherapy, HOCATT ozone sauna, hyperbaric oxygen therapy, red light therapy, compression therapy, peptide therapy, and GLP-1 medical weight loss.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "3568 Old Milton Pkwy",
+            "addressLocality": "Alpharetta",
+            "addressRegion": "GA",
+            "postalCode": "30005",
+            "addressCountry": "US"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 34.0754,
+            "longitude": -84.2941
+          },
+          "priceRange": "$$",
+          "medicalSpecialty": "Wellness",
+          "areaServed": [
+            "Alpharetta, GA",
+            "Milton, GA",
+            "Roswell, GA",
+            "Johns Creek, GA",
+            "Cumming, GA",
+            "Duluth, GA",
+            "Sandy Springs, GA",
+            "East Cobb, GA",
+            "Marietta, GA",
+            "North Fulton County"
+          ],
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "09:00",
+              "closes": "18:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": "Saturday",
+              "opens": "10:00",
+              "closes": "16:00"
+            }
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "87",
+            "bestRating": "5"
+          },
+          "sameAs": []
         }
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "87",
-        "bestRating": "5"
-      }
+      ]
     }
     </script>
     
