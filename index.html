@@ -285,6 +285,40 @@
         </div>
     </section>
     
+    <!-- GOOGLE REVIEWS (live) -->
+    <section class="testimonials-section" id="reviews">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Patients Say</h2>
+                <div id="google-rating-summary" style="display:none; align-items:center; justify-content:center; gap:0.75rem; margin-top:0.5rem; flex-wrap:wrap;">
+                    <span id="google-stars" style="color:#F5A623; font-size:1.4rem; letter-spacing:2px;"></span>
+                    <span id="google-score" style="font-size:1.25rem; font-weight:700; color:#1a1a1a;"></span>
+                    <a id="google-review-link" href="#" target="_blank" rel="noopener" style="font-size:0.95rem; color:#00aab8; font-weight:600; text-decoration:none;">
+                        See all reviews on Google ↗
+                    </a>
+                </div>
+            </div>
+
+            <!-- Loading state -->
+            <div id="reviews-loading" style="text-align:center; padding:2rem; color:#6B7280;">
+                Loading reviews…
+            </div>
+
+            <!-- Scrollable row wrapper -->
+            <div class="reviews-scroll-wrapper" style="display:none;" id="reviews-scroll-wrapper">
+                <button class="reviews-arrow reviews-arrow-left" id="reviews-prev" aria-label="Previous reviews">&#8592;</button>
+                <div id="reviews-grid" class="reviews-scroll-track"></div>
+                <button class="reviews-arrow reviews-arrow-right" id="reviews-next" aria-label="Next reviews">&#8594;</button>
+            </div>
+
+            <!-- Error / fallback -->
+            <div id="reviews-error" style="display:none; text-align:center; padding:2rem;">
+                <p style="color:#6B7280; margin-bottom:1rem;">Unable to load reviews right now.</p>
+                <a id="reviews-error-link" href="#" target="_blank" rel="noopener" class="btn btn-secondary">Read Our Google Reviews</a>
+            </div>
+        </div>
+    </section>
+
     <!-- WHY CHOOSE THRIVE -->
     <section class="trust-section">
         <div class="container">
@@ -354,40 +388,6 @@
         </div>
     </section>
     
-    <!-- GOOGLE REVIEWS (live) -->
-    <section class="testimonials-section" id="reviews">
-        <div class="container">
-            <div class="section-header">
-                <h2>What Our Patients Say</h2>
-                <div id="google-rating-summary" style="display:none; align-items:center; justify-content:center; gap:0.75rem; margin-top:0.5rem; flex-wrap:wrap;">
-                    <span id="google-stars" style="color:#F5A623; font-size:1.4rem; letter-spacing:2px;"></span>
-                    <span id="google-score" style="font-size:1.25rem; font-weight:700; color:#1a1a1a;"></span>
-                    <a id="google-review-link" href="#" target="_blank" rel="noopener" style="font-size:0.95rem; color:#00aab8; font-weight:600; text-decoration:none;">
-                        See all reviews on Google ↗
-                    </a>
-                </div>
-            </div>
-
-            <!-- Loading state -->
-            <div id="reviews-loading" style="text-align:center; padding:2rem; color:#6B7280;">
-                Loading reviews…
-            </div>
-
-            <!-- Scrollable row wrapper -->
-            <div class="reviews-scroll-wrapper" style="display:none;" id="reviews-scroll-wrapper">
-                <button class="reviews-arrow reviews-arrow-left" id="reviews-prev" aria-label="Previous reviews">&#8592;</button>
-                <div id="reviews-grid" class="reviews-scroll-track"></div>
-                <button class="reviews-arrow reviews-arrow-right" id="reviews-next" aria-label="Next reviews">&#8594;</button>
-            </div>
-
-            <!-- Error / fallback -->
-            <div id="reviews-error" style="display:none; text-align:center; padding:2rem;">
-                <p style="color:#6B7280; margin-bottom:1rem;">Unable to load reviews right now.</p>
-                <a id="reviews-error-link" href="#" target="_blank" rel="noopener" class="btn btn-secondary">Read Our Google Reviews</a>
-            </div>
-        </div>
-    </section>
-
     <!-- Google Places API (New) — live reviews -->
     <script>
     var GOOGLE_PLACE_ID   = 'ChIJ1wzHAuSf9YgR7Ip5Uj74sWM';
