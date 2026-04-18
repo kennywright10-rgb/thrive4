@@ -336,20 +336,23 @@ strong {
 
 /* Homepage-only: left-aligned hero layout */
 .hero-content--left {
-    margin: 0;
-    text-align: left;
-    max-width: 620px;
+    margin: 0 auto 0 0 !important;
+    text-align: left !important;
+    max-width: 600px;
 }
 
 .hero-content--left .hero-title,
 .hero-content--left .hero-subtitle,
 .hero-content--left .hero-closing {
-    text-align: left;
+    text-align: left !important;
 }
 
-.hero-content--left .hero-subtitle,
+.hero-content--left .hero-subtitle {
+    border-radius: 12px 12px 0 0;
+}
+
 .hero-content--left .hero-closing {
-    border-radius: 12px;
+    border-radius: 0 0 12px 12px;
 }
 
 .hero-content--left .hero-badges {
