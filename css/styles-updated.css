@@ -708,6 +708,9 @@ strong {
 .conversion-note {
     margin-top: 1.5rem;
     font-size: 1.125rem;
+    text-align: center;
+    width: 100%;
+    display: block;
 }
 
 .conversion-note a {
