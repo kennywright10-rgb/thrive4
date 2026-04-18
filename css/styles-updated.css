@@ -334,6 +334,32 @@ strong {
     text-align: center;
 }
 
+/* Homepage-only: left-aligned hero layout */
+.hero-content--left {
+    margin: 0;
+    text-align: left;
+    max-width: 620px;
+}
+
+.hero-content--left .hero-title,
+.hero-content--left .hero-subtitle,
+.hero-content--left .hero-closing {
+    text-align: left;
+}
+
+.hero-content--left .hero-subtitle,
+.hero-content--left .hero-closing {
+    border-radius: 12px;
+}
+
+.hero-content--left .hero-badges {
+    justify-content: flex-start;
+}
+
+.hero-content--left .hero-cta {
+    justify-content: flex-start;
+}
+
 .hero-title {
     color: #FFFFFF !important;
     font-size: 3.5rem;
