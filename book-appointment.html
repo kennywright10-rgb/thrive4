@@ -3,10 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ready to optimize your performance? Book an IV drip, cryotherapy, HOCATT, or hyperbaric session at THRIVE in Alpharetta, GA. Call or schedule online today.">
+    <meta name="description" content="Book an IV therapy, cryotherapy, HOCATT, hyperbaric oxygen, or weight loss session at THRIVE 4 Peak Performance in Alpharetta, GA. Respond within 2 hours.">
 
-    <title>Book a Session | THRIVE 4 Peak Performance Alpharetta</title>
-    
+    <title>Book an Appointment | THRIVE 4 Peak Performance Alpharetta</title>
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.thrive4peakperformance.com/book-appointment.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Book an Appointment | THRIVE 4 Peak Performance">
+    <meta property="og:description" content="Schedule your IV therapy, cryotherapy, HOCATT, hyperbaric oxygen, or GLP-1 weight loss session at THRIVE 4 Peak Performance in Alpharetta, GA.">
+    <meta property="og:url" content="https://www.thrive4peakperformance.com/book-appointment.html">
+    <meta property="og:image" content="https://www.thrive4peakperformance.com/images/about-hero.jpg">
+    <meta property="og:site_name" content="THRIVE 4 Peak Performance">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Book an Appointment | THRIVE 4 Peak Performance">
+    <meta name="twitter:image" content="https://www.thrive4peakperformance.com/images/about-hero.jpg">
+
     <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
@@ -14,263 +28,388 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#00CED1">
-    
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/contact.css">
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FQN6ZGY0P9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-FQN6ZGY0P9', {
+            'send_page_view': true,
+            'allow_google_signals': true,
+            'allow_ad_personalization_signals': true
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
+                el.addEventListener('click', function() {
+                    gtag('event', 'phone_click', { 'event_category': 'engagement', 'event_label': 'Phone Number Click' });
+                });
+            });
+            document.querySelectorAll('.btn-primary, .cta-button').forEach(function(el) {
+                el.addEventListener('click', function() {
+                    gtag('event', 'cta_click', { 'event_category': 'engagement', 'event_label': el.textContent.trim(), 'value': 1 });
+                });
+            });
+            // Track form submissions
+            var form = document.getElementById('bookingForm');
+            if (form) {
+                form.addEventListener('submit', function() {
+                    gtag('event', 'form_submit', { 'event_category': 'conversion', 'event_label': 'Appointment Request' });
+                });
+            }
+        });
+    </script>
+
+    <link rel="stylesheet" href="css/styles-updated.css">
+
+    <style>
+        /* Booking page specific styles */
+        .booking-layout {
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 3rem;
+            align-items: start;
+            padding: 4rem 0;
+        }
+        @media (max-width: 900px) {
+            .booking-layout {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 2rem 0;
+            }
+        }
+
+        /* Form styles */
+        .booking-form-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 2.5rem;
+        }
+        .booking-form-card h2 {
+            font-size: 1.6rem;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+        }
+        .booking-form-card .form-intro {
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 0.4rem;
+            font-size: 0.9rem;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1.5px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #1a1a1a;
+            background: #fafafa;
+            transition: border-color 0.2s;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #00CED1;
+            background: #fff;
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        .required { color: #e74c3c; }
+        .btn-full { width: 100%; text-align: center; }
+        .form-privacy {
+            font-size: 0.8rem;
+            color: #999;
+            margin-top: 1rem;
+            text-align: center;
+            line-height: 1.5;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        @media (max-width: 500px) {
+            .form-row { grid-template-columns: 1fr; }
+        }
+
+        /* Info sidebar */
+        .info-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+        .info-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 1.75rem;
+        }
+        .info-card h3 {
+            font-size: 1.1rem;
+            color: #1a1a1a;
+            margin-bottom: 0.75rem;
+        }
+        .info-card p {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+        .info-card a { color: #00CED1; }
+        .info-card .hours p { margin-bottom: 0; }
+        .info-card h4 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #999;
+            margin: 1rem 0 0.5rem;
+        }
+        .expect-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .expect-list li {
+            padding: 0.4rem 0;
+            color: #555;
+            font-size: 0.95rem;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .expect-list li:last-child { border-bottom: none; }
+        .expect-list li::before {
+            content: "✓ ";
+            color: #00CED1;
+            font-weight: 700;
+        }
+        .trust-badges-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            padding: 3rem 0;
+        }
+        @media (max-width: 768px) {
+            .trust-badges-row { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 480px) {
+            .trust-badges-row { grid-template-columns: 1fr; }
+        }
+        .trust-badge-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .trust-badge-item .badge-icon {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+        .trust-badge-item h4 {
+            font-size: 0.95rem;
+            color: #1a1a1a;
+            margin-bottom: 0.35rem;
+        }
+        .trust-badge-item p {
+            font-size: 0.85rem;
+            color: #777;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
-    
-    <!-- HEADER -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <a href="/" class="logo">
-                    <img src="/images/logo.png" alt="THRIVE 4 Peak Performance Logo" width="200" height="66">
-                </a>
-                
-                <nav class="main-nav">
-                    <ul class="nav-list">
-                        <li class="nav-item dropdown">
-                            <a href="#" class="nav-link">Services</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/services/iv-therapy-alpharetta-ga/">IV Therapy & NAD+</a></li>
-                                <li><a href="/services/hocatt-ozone-sauna-alpharetta/">HOCATT Ozone Sauna</a></li>
-                                <li><a href="/services/cryotherapy-alpharetta-ga/">Cryotherapy</a></li>
-                                <li><a href="/services/hyperbaric-oxygen-therapy-alpharetta/">Hyperbaric Oxygen</a></li>
-                                <li><a href="/services/red-light-therapy-alpharetta/">Red Light Therapy</a></li>
-                                <li><a href="/services/compression-therapy-alpharetta/">Compression Therapy</a></li>
-                                <li><a href="/services/weight-loss-glp1-alpharetta/">Weight Loss (GLP-1)</a></li>
-                                <li><a href="/services/peptide-therapy-alpharetta/">Peptide Therapy</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a href="/about/" class="nav-link">About</a></li>
-                        <li class="nav-item"><a href="/our-medical-team/" class="nav-link">Our Team</a></li>
-                        <li class="nav-item"><a href="/faq/" class="nav-link">FAQ</a></li>
-                        <li class="nav-item"><a href="/blog/" class="nav-link">Blog</a></li>
-                    </ul>
-                </nav>
-                
-                <div class="header-cta">
-                    <a href="tel:4703596195" class="phone-link">(470) 359-6195</a>
-                    <a href="/book-appointment/" class="btn btn-primary">Book Appointment</a>
-                </div>
-                
-                <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
+
+    <div id="header-placeholder"></div>
+
+    <!-- HERO -->
+    <section class="hero" style="min-height: 380px;">
+        <div class="hero-background">
+            <img src="images/about-hero.jpg" alt="Book an appointment at THRIVE 4 Peak Performance Alpharetta">
         </div>
-    </header>
-    
-    <!-- BOOKING HERO -->
-    <section class="booking-hero">
         <div class="container">
-            <div class="booking-hero-content">
-                <h1>Get Started with THRIVE</h1>
-                <p>We typically respond within 2 hours during business hours. Ready to talk now? Call us at <a href="tel:4703596195">(470) 359-6195</a></p>
+            <div class="hero-content">
+                <h1 class="hero-title">Book Your Session</h1>
+                <p class="hero-subtitle">We respond within 2 hours during business hours. Ready now? Call <a href="tel:4703596195" style="color:#00CED1;">(470) 359-6195</a></p>
             </div>
         </div>
     </section>
-    
-    <!-- BOOKING FORM SECTION -->
-    <section class="booking-form-section">
+
+    <!-- BOOKING FORM + SIDEBAR -->
+    <section class="trust-section" style="background:#F9FAFB;">
         <div class="container">
             <div class="booking-layout">
-                <!-- Form Column -->
-                <div class="form-column">
-                    <form id="bookingForm" class="booking-form" action="https://api.web3forms.com/submit" method="POST">
+
+                <!-- FORM -->
+                <div class="booking-form-card">
+                    <h2>Request an Appointment</h2>
+                    <p class="form-intro">Fill out the form below and our team will reach out to confirm your appointment and answer any questions.</p>
+
+                    <form id="bookingForm" action="https://api.web3forms.com/submit" method="POST">
                         <input type="hidden" name="access_key" value="3084231b-5609-4e36-848e-e9a8bdd77d95">
                         <input type="hidden" name="subject" value="New Appointment Request — THRIVE 4 Peak Performance">
                         <input type="hidden" name="from_name" value="THRIVE Website">
                         <input type="hidden" name="redirect" value="https://thrive4peakperformance.com/thank-you.html">
                         <input type="checkbox" name="botcheck" style="display:none;">
-                        <div class="form-group">
-                            <label for="fullName">Full Name <span class="required">*</span></label>
-                            <input 
-                                type="text" 
-                                id="fullName" 
-                                name="fullName" 
-                                required
-                                placeholder="John Smith"
-                                aria-required="true"
-                            >
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Full Name <span class="required">*</span></label>
+                                <input type="text" id="fullName" name="fullName" required placeholder="Jane Smith" aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number <span class="required">*</span></label>
+                                <input type="tel" id="phone" name="phone" required placeholder="(470) 123-4567" aria-required="true">
+                            </div>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">Phone Number <span class="required">*</span></label>
-                            <input 
-                                type="tel" 
-                                id="phone" 
-                                name="phone" 
-                                required
-                                placeholder="(470) 123-4567"
-                                aria-required="true"
-                            >
-                        </div>
-                        
+
                         <div class="form-group">
                             <label for="email">Email Address <span class="required">*</span></label>
-                            <input 
-                                type="email" 
-                                id="email" 
-                                name="email" 
-                                required
-                                placeholder="john@example.com"
-                                aria-required="true"
-                            >
+                            <input type="email" id="email" name="email" required placeholder="jane@example.com" aria-required="true">
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="service">Preferred Service</label>
                             <select id="service" name="service">
                                 <option value="">Not sure yet / General consultation</option>
-                                <option value="iv-therapy">IV Therapy & NAD+</option>
+                                <option value="iv-therapy">IV Therapy &amp; NAD+</option>
                                 <option value="hocatt">HOCATT Ozone Sauna</option>
                                 <option value="cryotherapy">Cryotherapy</option>
                                 <option value="hyperbaric">Hyperbaric Oxygen</option>
                                 <option value="red-light">Red Light Therapy</option>
                                 <option value="compression">Compression Therapy</option>
-                                <option value="weight-loss">Weight Loss Program</option>
+                                <option value="weight-loss">Weight Loss Program (GLP-1)</option>
                                 <option value="peptides">Peptide Therapy</option>
-                                <option value="other">Other</option>
+                                <option value="other">Other / Not Sure</option>
                             </select>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="message">How can we help you?</label>
-                            <textarea 
-                                id="message" 
-                                name="message" 
-                                rows="5"
-                                placeholder="Tell us about your health goals or what brought you here today..."
-                            ></textarea>
+                            <textarea id="message" name="message" placeholder="Tell us about your health goals or what brought you here today..."></textarea>
                         </div>
-                        
+
                         <button type="submit" class="btn btn-primary btn-lg btn-full">Request Your Consultation</button>
-                        
-                        <p class="form-privacy">Your information is confidential and HIPAA-compliant. We'll never share your details or send unsolicited emails.</p>
+
+                        <p class="form-privacy">Your information is confidential and HIPAA-compliant. We will never share your details or send unsolicited emails.</p>
                     </form>
                 </div>
-                
-                <!-- Info Column -->
-                <div class="info-column">
+
+                <!-- SIDEBAR -->
+                <div class="info-sidebar">
                     <div class="info-card">
-                        <h3>Visit Our Clinic</h3>
+                        <h3>📍 Visit Our Clinic</h3>
                         <p><strong>THRIVE 4 Peak Performance</strong><br>
                         3568 Old Milton Pkwy<br>
                         Alpharetta, GA 30005</p>
-                        
                         <p><strong>Phone:</strong> <a href="tel:4703596195">(470) 359-6195</a><br>
-                        <strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#60090e060f20140812091605541005010b100512060f120d010e03054e030f0d"><span class="__cf_email__" data-cfemail="0d64636b624d79657f647b68397d686c667d687f6b627f606c636e68236e6260">[email&#160;protected]</span></a></p>
-                        
-                        <div class="hours">
-                            <h4>Hours</h4>
-                            <p>
-                                <strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM<br>
-                                <strong>Saturday:</strong> 10:00 AM - 4:00 PM<br>
-                                <strong>Sunday:</strong> Closed
-                            </p>
-                        </div>
+                        <strong>Email:</strong> <a href="mailto:info@thrive4peakperformance.com">info@thrive4peakperformance.com</a></p>
+                        <h4>Hours</h4>
+                        <p>
+                            <strong>Mon – Fri:</strong> 9:00 AM – 6:00 PM<br>
+                            <strong>Saturday:</strong> 10:00 AM – 4:00 PM<br>
+                            <strong>Sunday:</strong> Closed
+                        </p>
                     </div>
-                    
+
                     <div class="info-card">
-                        <h3>What to Expect</h3>
+                        <h3>✅ What to Expect</h3>
                         <ul class="expect-list">
                             <li>Response within 2 business hours</li>
                             <li>Free 15-minute consultation</li>
-                            <li>No pressure, honest medical guidance</li>
-                            <li>Most appointments within 48 hours</li>
+                            <li>No pressure — honest medical guidance</li>
+                            <li>Most appointments available within 48 hours</li>
                         </ul>
                     </div>
-                    
+
                     <div class="info-card">
-                        <h3>Prefer to Call?</h3>
+                        <h3>📞 Prefer to Call?</h3>
                         <p>Speak directly with our team:</p>
-                        <a href="tel:4703596195" class="btn btn-secondary btn-full">(470) 359-6195</a>
+                        <a href="tel:4703596195" class="btn btn-secondary btn-full" style="display:block; text-align:center;">(470) 359-6195</a>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
-    
+
     <!-- TRUST BADGES -->
-    <section class="trust-badges">
+    <section class="trust-section">
         <div class="container">
-            <div class="badges-grid">
-                <div class="badge">
-                    <h4>✓ Board-Certified Physicians</h4>
+            <div class="trust-badges-row">
+                <div class="trust-badge-item">
+                    <div class="badge-icon">🩺</div>
+                    <h4>Board-Certified Physicians</h4>
                     <p>Medical expertise you can trust</p>
                 </div>
-                <div class="badge">
-                    <h4>✓ Licensed Medical Staff</h4>
-                    <p>Registered nurses & nurse practitioners</p>
+                <div class="trust-badge-item">
+                    <div class="badge-icon">👩‍⚕️</div>
+                    <h4>Licensed Medical Staff</h4>
+                    <p>Registered nurses &amp; nurse practitioners</p>
                 </div>
-                <div class="badge">
-                    <h4>✓ HIPAA Compliant</h4>
+                <div class="trust-badge-item">
+                    <div class="badge-icon">🔒</div>
+                    <h4>HIPAA Compliant</h4>
                     <p>Your privacy is protected</p>
                 </div>
-                <div class="badge">
-                    <h4>✓ Fast Scheduling</h4>
+                <div class="trust-badge-item">
+                    <div class="badge-icon">📅</div>
+                    <h4>Fast Scheduling</h4>
                     <p>Most appointments within 48 hours</p>
                 </div>
             </div>
         </div>
     </section>
-    
-    <!-- FOOTER -->
-    <footer class="footer">
+
+    <!-- CTA -->
+    <section class="conversion-section">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-column">
-                    <img src="/images/logo-white.png" alt="THRIVE 4 Peak Performance" class="footer-logo" width="200" height="66">
-                    <p>Physician-led wellness and recovery clinic serving Alpharetta and North Fulton County.</p>
-                    <p><strong>Board-certified medical oversight.<br>Evidence-based therapies.</strong></p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Instagram"><img src="/images/icon-instagram.svg" alt="Instagram" width="32" height="32"></a>
-                        <a href="#" aria-label="Facebook"><img src="/images/icon-facebook.svg" alt="Facebook" width="32" height="32"></a>
-                    </div>
-                </div>
-                
-                <div class="footer-column">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="/services/iv-therapy-alpharetta-ga/">IV Therapy & NAD+</a></li>
-                        <li><a href="/services/hocatt-ozone-sauna-alpharetta/">HOCATT Ozone Sauna</a></li>
-                        <li><a href="/services/cryotherapy-alpharetta-ga/">Cryotherapy</a></li>
-                        <li><a href="/services/hyperbaric-oxygen-therapy-alpharetta/">Hyperbaric Oxygen</a></li>
-                        <li><a href="/services/red-light-therapy-alpharetta/">Red Light Therapy</a></li>
-                        <li><a href="/services/compression-therapy-alpharetta/">Compression Therapy</a></li>
-                        <li><a href="/services/weight-loss-glp1-alpharetta/">Weight Loss (GLP-1)</a></li>
-                        <li><a href="/services/peptide-therapy-alpharetta/">Peptide Therapy</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="/about/">About Us</a></li>
-                        <li><a href="/our-medical-team/">Our THRIVE Team</a></li>
-                        <li><a href="/faq/">FAQ</a></li>
-                        <li><a href="/blog/">Blog</a></li>
-                        <li><a href="/contact/">Contact</a></li>
-                        <li><a href="/book-appointment/">Book Appointment</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h4>Visit Us</h4>
-                    <p><strong>3568 Old Milton Pkwy</strong><br>
-                    Alpharetta, GA 30005</p>
-                    <p><strong>Phone:</strong> <a href="tel:4703596195">(470) 359-6195</a><br>
-                    <strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#aec7c0c8c1eedac6dcc7d8cb9adecbcfc5decbdcc8c1dcc3cfc0cdcb80cdc1c3"><span class="__cf_email__" data-cfemail="2d44434b426d59455f445b48195d484c465d485f4b425f404c434e48034e4240">[email&#160;protected]</span></a></p>
-                    <p><strong>Service Area:</strong><br>
-                    Alpharetta • Milton • Roswell<br>
-                    Johns Creek • North Fulton</p>
-                </div>
+            <div class="conversion-content">
+                <h2>Ready to Start Your Journey?</h2>
+                <p>Physician-led wellness in Alpharetta — built around you</p>
+                <a href="tel:4703596195" class="btn btn-primary btn-lg">(470) 359-6195</a>
+                <p class="conversion-note">Serving Alpharetta, Milton, Roswell, Johns Creek, and all of North Fulton County</p>
             </div>
-            
-            <div class="footer-bottom">
-                <p class="footer-disclaimer">Medical Disclaimer: Services provided by licensed medical professionals. Results vary. Not intended to diagnose, treat, cure, or prevent disease. Board-certified physician oversight. Licensed nurse practitioners.</p>
-                <p class="footer-copyright">© 2026
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Load Header and Footer -->
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                if (typeof initMobileMenu === 'function') {
+                    initMobileMenu();
+                }
+            });
+
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
