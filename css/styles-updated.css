@@ -292,6 +292,8 @@ strong {
     align-items: center;
     padding: 6rem 0;
     overflow: hidden;
+    /* Branded gradient fallback when no image is present */
+    background: linear-gradient(135deg, #04122b 0%, #004aad 60%, #0077b6 100%);
 }
 
 .hero-background {
@@ -301,6 +303,8 @@ strong {
     width: 100%;
     height: 100%;
     z-index: 0;
+    /* Fallback in case image is slow to load */
+    background: linear-gradient(135deg, #04122b 0%, #004aad 60%, #0077b6 100%);
 }
 
 .hero-background::after {
@@ -312,11 +316,10 @@ strong {
     height: 100%;
     background: linear-gradient(
         to bottom,
-        rgba(0, 0, 0, 0.3) 0%,
-        rgba(0, 0, 0, 0.1) 30%,
-        rgba(0, 0, 0, 0) 50%,
-        rgba(0, 0, 0, 0.1) 70%,
-        rgba(0, 0, 0, 0.3) 100%
+        rgba(0, 0, 0, 0.45) 0%,
+        rgba(0, 0, 0, 0.2) 40%,
+        rgba(0, 0, 0, 0.2) 60%,
+        rgba(0, 0, 0, 0.45) 100%
     );
 }
 
