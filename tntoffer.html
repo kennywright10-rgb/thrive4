@@ -39,7 +39,11 @@
             if (form) {
                 form.addEventListener('submit', () => {
                     gtag('event', 'form_submit', { event_category: 'conversion', event_label: 'TNT Offer Claim' });
-                    gtag('event', 'conversion', { 'send_to': 'AW-18155742317' });
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-18155742317/ClDECNve3KwcEO3IqtFD',
+                        'value': 1.0,
+                        'currency': 'USD'
+                    });
                 });
             }
         });
