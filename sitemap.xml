@@ -670,26 +670,40 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Legal Pages -->
+  <!-- Core 30 Local SEO Pages — Alpharetta GBP Ranking -->
   <url>
-    <loc>https://www.thrive4peakperformance.com/privacy-policy.html</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://www.thrive4peakperformance.com/hydrafacial-alpharetta-ga.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.thrive4peakperformance.com/terms-of-service.html</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://www.thrive4peakperformance.com/head-spa-alpharetta-ga.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.thrive4peakperformance.com/medical-disclaimer.html</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://www.thrive4peakperformance.com/microneedling-alpharetta-ga.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.thrive4peakperformance.com/wellness-clinic-alpharetta-ga.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.thrive4peakperformance.com/medspa-alpharetta-ga.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 
 </urlset>
