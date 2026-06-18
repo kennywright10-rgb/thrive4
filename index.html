@@ -570,11 +570,22 @@
 
     <!-- Load main.js first so functions are available -->
     <script src="js/main.js"></script>
-    
+
     <!-- Load Header and Footer with JavaScript -->
     <script>
         // Load header
         fetch('header.html')
             .then(response => response.text())
             .then(data => {
-                document.getElementById('header-placeholder').innerH
+                document.getElementById('header-placeholder').innerHTML = data;
+                if (typeof initMobileMenu === 'function') initMobileMenu();
+            });
+        // Load footer
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
