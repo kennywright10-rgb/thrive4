@@ -240,17 +240,7 @@
                     </div>
                 </a>
 
-                <!-- Service 6: Compression -->
-                <a href="/services/compression-therapy-alpharetta.html" class="service-compact-card">
-                    <div class="service-compact-image">
-                        <img src="/images/service-compression.jpg" alt="Compression boots recovery therapy Alpharetta" loading="lazy">
-                    </div>
-                    <div class="service-compact-content">
-                        <h3>COMPRESSION BOOTS</h3>
-                    </div>
-                </a>
-
-                <!-- Service 7: Peptides -->
+                <!-- Service 6: Peptides -->
                 <a href="/services/peptide-therapy-alpharetta.html" class="service-compact-card">
                     <div class="service-compact-image">
                         <img src="/images/service-peptides.jpg" alt="Peptide therapy Alpharetta GA" loading="lazy">
@@ -270,27 +260,7 @@
                     </div>
                 </a>
 
-                <!-- Service 9: Custom Massage Chair -->
-                <a href="/services/massage-chair-alpharetta.html" class="service-compact-card">
-                    <div class="service-compact-image">
-                        <img src="/images/service-massage-chair.jpg" alt="Custom massage chair therapy at THRIVE 4 Peak Performance Alpharetta" loading="lazy" style="object-position: center 70%;">
-                    </div>
-                    <div class="service-compact-content">
-                        <h3>CUSTOM MASSAGE CHAIR</h3>
-                    </div>
-                </a>
-
-                <!-- Service 10: Esthetics -->
-                <a href="/services/esthetics-alpharetta.html" class="service-compact-card">
-                    <div class="service-compact-image">
-                        <img src="/images/esthetics-hero.jpg" alt="Medical esthetics and facials Alpharetta GA" loading="lazy">
-                    </div>
-                    <div class="service-compact-content">
-                        <h3>ESTHETICS</h3>
-                    </div>
-                </a>
-
-                <!-- Service 11: Microneedling -->
+                <!-- Service 9: Microneedling -->
                 <a href="/services/microneedling-alpharetta.html" class="service-compact-card">
                     <div class="service-compact-image">
                         <img src="/images/microneedling-hero.jpg" alt="Microneedling collagen induction therapy Alpharetta GA" loading="lazy">
@@ -622,22 +592,4 @@
         fetch('header.html')
             .then(response => response.text())
             .then(data => {
-                document.getElementById('header-placeholder').innerHTML = data;
-                // Reinitialize mobile menu after header loads
-                if (typeof initMobileMenu === 'function') {
-                    initMobileMenu();
-                }
-            })
-            .catch(error => console.error('Error loading header:', error));
-        
-        // Load footer
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer-placeholder').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading footer:', error));
-    </script>
-    
-</body>
-</html>
+                document.getElementById('header-placeholder').innerH
