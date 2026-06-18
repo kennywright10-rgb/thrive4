@@ -122,6 +122,34 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://www.thrive4peakperformance.com/services/esthetics-alpharetta.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.thrive4peakperformance.com/services/microneedling-alpharetta.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.thrive4peakperformance.com/services/hydrafacial-alpharetta.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.thrive4peakperformance.com/services/head-spa-alpharetta.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Blog Posts - Existing -->
   <url>
     <loc>https://www.thrive4peakperformance.com/blog/iv-therapy-benefits-alpharetta.html</loc>
@@ -182,6 +210,13 @@
   <url>
     <loc>https://www.thrive4peakperformance.com/blog/glutathione-iv-therapy-alpharetta.html</loc>
     <lastmod>2026-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.thrive4peakperformance.com/blog/cortisol-burnout-iv-therapy-alpharetta.html</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
