@@ -706,4 +706,33 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Entity / AI SEO Pages — Local Authority by City -->
+  <url>
+    <loc>https://www.thrive4peakperformance.com/thrive4-alpharetta-ga.html</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://www.thrive4peakperformance.com/thrive4-milton-ga.html</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.thrive4peakperformance.com/thrive4-johns-creek-ga.html</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.thrive4peakperformance.com/thrive4-cumming-ga.html</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
 </urlset>
