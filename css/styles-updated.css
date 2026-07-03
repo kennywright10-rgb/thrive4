@@ -1451,6 +1451,91 @@ textarea:focus {
     }
 }
 
+/* ==========================================
+   HOMEPAGE HERO — MOBILE: IMAGE ABOVE, TEXT BELOW
+   ========================================== */
+@media (max-width: 768px) {
+    /* Break out of overlay layout for homepage hero only */
+    .hero--home {
+        min-height: auto !important;
+        padding: 0 !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        background: #04122b;
+    }
+
+    /* Make background image a static block on top */
+    .hero--home .hero-background {
+        position: static !important;
+        width: 100% !important;
+        height: 260px !important;
+        flex-shrink: 0;
+    }
+
+    /* Remove the dark overlay — not needed since text is below */
+    .hero--home .hero-background::after {
+        display: none !important;
+    }
+
+    /* Image fills the box */
+    .hero--home .hero-background img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 20%;
+    }
+
+    /* Container becomes the text area below the image */
+    .hero--home .container {
+        position: static !important;
+        padding: 1.75rem 20px 2rem !important;
+        margin: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        background: #04122b;
+    }
+
+    /* Content fills full width on mobile */
+    .hero--home .hero-content--left {
+        max-width: 100% !important;
+        text-align: center !important;
+    }
+
+    /* Remove text shadows — not over an image anymore */
+    .hero--home .hero-title {
+        font-size: 1.85rem !important;
+        text-shadow: none !important;
+        text-align: center !important;
+        margin-bottom: 0.875rem !important;
+    }
+
+    .hero--home .hero-subtitle {
+        font-size: 1rem !important;
+        text-shadow: none !important;
+        text-align: center !important;
+    }
+
+    .hero--home .hero-closing {
+        text-align: center !important;
+        text-shadow: none !important;
+    }
+
+    .hero--home .hero-cta {
+        justify-content: center !important;
+    }
+
+    /* Restore secondary button on homepage mobile since layout is clean */
+    .hero--home .hero-cta .btn-secondary {
+        display: block !important;
+    }
+
+    /* Hide the "Or call" pseudo-element — less needed with cleaner layout */
+    .hero--home .hero-cta::after {
+        font-size: 0.85rem;
+        margin-top: 0.25rem;
+    }
+}
+
 /* Print Styles */
 @media print {
     .header,
