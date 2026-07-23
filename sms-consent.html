@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SMS Text Message Consent form for Thrive IV PL LLC. Opt in to receive appointment reminders, wellness promotions, and clinic communications via text message.">
+    <link rel="canonical" href="https://www.thrive4peakperformance.com/sms-consent.html">
+    <title>SMS Text Message Consent – Thrive IV PL LLC</title>
+    <meta name="robots" content="index, follow">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#00CED1">
+
+    <link rel="stylesheet" href="css/styles-updated.css">
+    <link rel="stylesheet" href="css/service-page.css">
+    <link rel="stylesheet" href="css/service-page-enhanced.css">
+
+    <style>
+        .sms-page {
+            padding: 4rem 0 5rem;
+            background: #fff;
+        }
+        .sms-page .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Page header */
+        .sms-page-header {
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid #e8ecf0;
+        }
+        .sms-page-header h1 {
+            font-size: 1.9rem;
+            color: #04122b;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+        .sms-page-header .sms-entity {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #004aad;
+            margin-bottom: 0.35rem;
+        }
+        .sms-page-header .sms-address {
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.7;
+        }
+        .sms-page-header .sms-address a {
+            color: #00CED1;
+        }
+
+        /* Consent body */
+        .sms-consent-body {
+            color: #374151;
+            line-height: 1.8;
+            font-size: 0.975rem;
+            margin-bottom: 2rem;
+        }
+        .sms-consent-body p {
+            margin-bottom: 1rem;
+        }
+        .sms-consent-body strong {
+            color: #1a1a1a;
+        }
+
+        /* Message types list */
+        .sms-message-types {
+            background: #f8f9fb;
+            border-left: 4px solid #00CED1;
+            border-radius: 0 8px 8px 0;
+            padding: 1rem 1.25rem;
+            margin: 1.25rem 0;
+            font-size: 0.9rem;
+            color: #374151;
+            line-height: 1.8;
+        }
+
+        /* Key terms */
+        .sms-key-terms {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+            margin: 1.5rem 0;
+        }
+        .sms-term {
+            background: #f8f9fb;
+            border: 1px solid #e8ecf0;
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            font-size: 0.875rem;
+        }
+        .sms-term strong {
+            display: block;
+            color: #04122b;
+            margin-bottom: 0.2rem;
+        }
+        .sms-term span {
+            color: #555;
+        }
+
+        /* Consent form card */
+        .sms-form-card {
+            background: #fff;
+            border: 2px solid #e8ecf0;
+            border-radius: 14px;
+            padding: 2rem;
+            margin-top: 2rem;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+        }
+        .sms-form-card h2 {
+            font-size: 1.2rem;
+            color: #04122b;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid #e8ecf0;
+        }
+
+        /* Checkbox consent row */
+        .sms-checkbox-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.85rem;
+            margin-bottom: 1.75rem;
+            padding: 1.25rem;
+            background: #f0fdfd;
+            border: 1.5px solid #00CED1;
+            border-radius: 10px;
+        }
+        .sms-checkbox-row input[type="checkbox"] {
+            width: 22px;
+            height: 22px;
+            min-width: 22px;
+            margin-top: 2px;
+            accent-color: #00CED1;
+            cursor: pointer;
+        }
+        .sms-checkbox-row label {
+            font-size: 0.9rem;
+            color: #1a1a1a;
+            line-height: 1.6;
+            cursor: pointer;
+        }
+
+        /* Form fields */
+        .sms-form-group {
+            margin-bottom: 1.1rem;
+        }
+        .sms-form-group label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 0.4rem;
+        }
+        .sms-form-group input {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1.5px solid #dde1e7;
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #1a1a1a;
+            background: #fafafa;
+            font-family: inherit;
+            transition: border-color 0.2s, background 0.2s;
+        }
+        .sms-form-group input:focus {
+            outline: none;
+            border-color: #00CED1;
+            background: #fff;
+        }
+        .required {
+            color: #e74c3c;
+        }
+
+        /* Submit button */
+        .sms-submit-btn {
+            width: 100%;
+            background: #00CED1;
+            color: #fff;
+            padding: 0.95rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            cursor: pointer;
+            margin-top: 0.5rem;
+            font-family: inherit;
+            transition: background 0.2s;
+        }
+        .sms-submit-btn:hover {
+            background: #00b5b8;
+        }
+
+        /* Submission note */
+        .sms-submission-note {
+            font-size: 0.8rem;
+            color: #6b7280;
+            text-align: center;
+            margin-top: 1rem;
+            line-height: 1.6;
+        }
+        .sms-submission-note a {
+            color: #00CED1;
+            text-decoration: underline;
+        }
+
+        /* Success message (hidden by default) */
+        .sms-success {
+            display: none;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+        .sms-success .success-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .sms-success h3 {
+            font-size: 1.3rem;
+            color: #04122b;
+            margin-bottom: 0.5rem;
+        }
+        .sms-success p {
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 600px) {
+            .sms-key-terms {
+                grid-template-columns: 1fr;
+            }
+            .sms-form-card {
+                padding: 1.5rem 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <div class="sms-page">
+        <div class="container">
+
+            <!-- Page Header -->
+            <div class="sms-page-header">
+                <h1>SMS Text Message Consent</h1>
+                <p class="sms-entity">Thrive IV PL LLC</p>
+                <div class="sms-address">
+                    3568 Old Milton Pkwy, Alpharetta, GA 30005<br>
+                    Phone: <a href="tel:4703596195">(470) 359-6195</a><br>
+                    Website: <a href="https://www.thrive4peakperformance.com">www.thrive4peakperformance.com</a>
+                </div>
+            </div>
+
+            <!-- Consent Language -->
+            <div class="sms-consent-body">
+                <p>By providing your mobile phone number and checking the box below, you consent to receive recurring SMS text messages from <strong>Thrive IV PL LLC</strong>. Message types include:</p>
+
+                <div class="sms-message-types">
+                    Appointment confirmations &nbsp;·&nbsp; Appointment reminders &nbsp;·&nbsp; Scheduling updates &nbsp;·&nbsp; Post-visit follow-up care information &nbsp;·&nbsp; Billing and account notifications &nbsp;·&nbsp; Wellness promotions &nbsp;·&nbsp; Clinic announcements
+                </div>
+
+                <div class="sms-key-terms">
+                    <div class="sms-term">
+                        <strong>Message Frequency</strong>
+                        <span>Approximately 1–4 messages per month</span>
+                    </div>
+                    <div class="sms-term">
+                        <strong>Rates</strong>
+                        <span>Message and data rates may apply</span>
+                    </div>
+                    <div class="sms-term">
+                        <strong>Opt Out</strong>
+                        <span>Reply <strong>STOP</strong> to any message at any time</span>
+                    </div>
+                    <div class="sms-term">
+                        <strong>Help</strong>
+                        <span>Reply <strong>HELP</strong> for assistance</span>
+                    </div>
+                </div>
+
+                <p>Consent is voluntary and is not a condition of receiving treatment or purchasing any goods or services.</p>
+            </div>
+
+            <!-- Consent Form -->
+            <div class="sms-form-card">
+                <h2>Provide Your Consent</h2>
+
+                <form id="smsConsentForm" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="3084231b-5609-4e36-848e-e9a8bdd77d95">
+                    <input type="hidden" name="subject" value="SMS Opt-In Consent Submission — Thrive IV PL LLC">
+                    <input type="hidden" name="from_name" value="SMS Consent Page">
+                    <input type="checkbox" name="botcheck" style="display:none;">
+
+                    <!-- Consent checkbox -->
+                    <div class="sms-checkbox-row">
+                        <input type="checkbox" id="smsConsent" name="smsConsent" value="Yes, I consent" required>
+                        <label for="smsConsent">
+                            <strong>Yes, I consent to receive SMS messages from Thrive IV PL LLC</strong> at the mobile number I provide below.
+                        </label>
+                    </div>
+
+                    <!-- Mobile number -->
+                    <div class="sms-form-group">
+                        <label for="mobileNumber">Mobile Number <span class="required">*</span></label>
+                        <input
+                            type="tel"
+                            id="mobileNumber"
+                            name="mobileNumber"
+                            required
+                            placeholder="(470) 123-4567"
+                            autocomplete="tel"
+                        >
+                    </div>
+
+                    <!-- Full name -->
+                    <div class="sms-form-group">
+                        <label for="fullName">Full Name <span class="required">*</span></label>
+                        <input
+                            type="text"
+                            id="fullName"
+                            name="fullName"
+                            required
+                            placeholder="Jane Smith"
+                            autocomplete="name"
+                        >
+                    </div>
+
+                    <button type="submit" class="sms-submit-btn">Submit Consent</button>
+
+                    <p class="sms-submission-note">
+                        By submitting this form, I agree to Thrive IV PL LLC's
+                        <a href="/privacy-policy.html" target="_blank">Privacy Policy</a> and
+                        <a href="/terms-and-conditions.html" target="_blank">Terms &amp; Conditions</a>.
+                    </p>
+                </form>
+
+                <div class="sms-success" id="smsSuccess">
+                    <div class="success-icon">✅</div>
+                    <h3>Consent Recorded</h3>
+                    <p>Thank you! You're now opted in to receive SMS messages from Thrive IV PL LLC. Reply STOP at any time to opt out.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+    <script src="/js/main.js"></script>
+    <script>
+        fetch('/header.html').then(r => r.text()).then(d => {
+            document.getElementById('header-placeholder').innerHTML = d;
+            if (typeof initMobileMenu === 'function') initMobileMenu();
+        });
+        fetch('/footer.html').then(r => r.text()).then(d => {
+            document.getElementById('footer-placeholder').innerHTML = d;
+        });
+
+        // Show success message after form submit
+        document.getElementById('smsConsentForm').addEventListener('submit', function(e) {
+            // Let web3forms handle the POST; show success inline
+            var form = this;
+            setTimeout(function() {
+                form.style.display = 'none';
+                document.getElementById('smsSuccess').style.display = 'block';
+            }, 1200);
+        });
+    </script>
+</body>
+</html>
