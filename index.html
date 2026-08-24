@@ -158,6 +158,34 @@
     </script>
     
     <link rel="stylesheet" href="css/styles-updated.css">
+    <style>
+        /* IV Therapy — Coming Soon state */
+        .service-coming-soon {
+            position: relative;
+            cursor: default;
+            pointer-events: none;
+        }
+        .service-coming-soon .service-compact-image img {
+            filter: grayscale(60%) brightness(0.75);
+        }
+        .service-coming-soon-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: #004aad;
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 0.35rem 0.75rem;
+            border-radius: 4px;
+            z-index: 2;
+        }
+        .service-coming-soon h3 {
+            opacity: 0.65;
+        }
+    </style>
 </head>
 <body>
     
@@ -191,14 +219,15 @@
             
             <div class="services-compact-grid">
                 <!-- Row 1 -->
-                <a href="/services/iv-therapy-alpharetta-ga.html" class="service-compact-card">
-                    <div class="service-compact-image">
+                <div class="service-compact-card service-coming-soon">
+                    <div class="service-compact-image" style="position:relative;">
+                        <span class="service-coming-soon-badge">Coming Soon</span>
                         <img src="/images/service-iv-therapy.jpg" alt="IV Drip Nutrition therapy in Alpharetta GA" loading="lazy">
                     </div>
                     <div class="service-compact-content">
                         <h3>IV DRIP NUTRITION</h3>
                     </div>
-                </a>
+                </div>
 
                 <a href="/services/hocatt-ozone-sauna-alpharetta.html" class="service-compact-card">
                     <div class="service-compact-image">
