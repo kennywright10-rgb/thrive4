@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Medical weight loss with GLP-1 in Alpharetta, GA. THRIVE Tech supervised semaglutide & tirzepatide programs tailored to your goals. Start your journey today. Book now.">
-    <meta name="keywords" content="GLP-1 weight loss, semaglutide, tirzepatide, Alpharetta, weight management, our team supervised, North Fulton County, metabolic health">
+    <meta name="description" content="Medical weight loss with GLP-1 in Alpharetta, GA. Physician-supervised semaglutide & tirzepatide programs tailored to your goals. Start your journey today. Book now.">
+    <meta name="keywords" content="GLP-1 weight loss, semaglutide, tirzepatide, Alpharetta, weight management, physician supervised, North Fulton County, metabolic health">
     <meta property="og:title" content="GLP-1 Weight Loss Alpharetta GA | THRIVE 4 Peak Performance">
-    <meta property="og:description" content="GLP-1 weight loss medication (semaglutide/tirzepatide) with professional supervision and lifestyle coaching in Alpharetta, GA. Achieve lasting results.">
+    <meta property="og:description" content="GLP-1 weight loss medication (semaglutide/tirzepatide) with physician supervision and lifestyle coaching in Alpharetta, GA. Achieve lasting results.">
     <meta property="og:image" content="https://thrive4peakperformance.com/images/service-weight-loss.jpg">
     <meta property="og:url" content="https://thrive4peakperformance.com/services/weight-loss-glp1-alpharetta.html">
     <meta name="canonical" href="https://thrive4peakperformance.com/services/weight-loss-glp1-alpharetta.html">
@@ -39,7 +39,7 @@
                 "name": "What is the difference between semaglutide and tirzepatide?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Semaglutide targets GLP-1 receptors only. Tirzepatide targets both GLP-1 and GIP receptors, providing dual hormone mimicry. Tirzepatide typically produces 20-25% weight loss while semaglutide produces 15-20% weight loss. Both are effective; yOur team will recommend based on your specific needs and medical history."
+                    "text": "Semaglutide targets GLP-1 receptors only. Tirzepatide targets both GLP-1 and GIP receptors, providing dual hormone mimicry. Tirzepatide typically produces 20-25% weight loss while semaglutide produces 15-20% weight loss. Both are effective; your physician will recommend based on your specific needs and medical history."
                 }
             },
             {
@@ -63,7 +63,7 @@
                 "name": "Are GLP-1 medications safe?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "GLP-1 agonists are FDA-approved and have extensive safety data. Common side effects are mild and usually temporary: nausea, constipation, or diarrhea that resolve as your body adjusts. Serious side effects are rare. our team monitors your response through regular check-ins and blood work to ensure safety throughout your program."
+                    "text": "GLP-1 agonists are FDA-approved and have extensive safety data. Common side effects are mild and usually temporary: nausea, constipation, or diarrhea that resolve as your body adjusts. Serious side effects are rare. Our physicians monitor your response through regular check-ins and blood work to ensure safety throughout your program."
                 }
             },
             {
@@ -85,7 +85,7 @@
       "@type": "Service",
       "serviceType": "GLP-1 Medical Weight Loss",
       "name": "GLP-1 Medical Weight Loss in Alpharetta, GA",
-      "description": "THRIVE Tech supervised GLP-1 weight loss therapy with semaglutide and tirzepatide combined with lifestyle coaching for significant, sustained weight loss.",
+      "description": "Physician-supervised GLP-1 weight loss therapy with semaglutide and tirzepatide combined with lifestyle coaching for significant, sustained weight loss.",
       "provider": {
         "@type": "MedicalBusiness",
         "@id": "https://www.thrive4peakperformance.com/#business",
@@ -110,7 +110,7 @@
         <div class="container">
             <div class="hero-content">
                 <h1>GLP-1 Weight Loss in Alpharetta, GA</h1>
-                <p class="hero-subtitle">THRIVE Tech supervised GLP-1 therapy combined with lifestyle coaching. Achieve significant, sustained weight loss.</p>
+                <p class="hero-subtitle">Physician-supervised GLP-1 therapy combined with lifestyle coaching. Achieve significant, sustained weight loss.</p>
             </div>
         </div>
     </section>
@@ -152,7 +152,7 @@
                     <p>GLP-1 therapy improves your body's ability to use fat for fuel rather than primarily relying on glucose. This reduces energy crashes, improves exercise capacity, and supports better body composition during weight loss (more fat loss, less muscle loss than diet alone).</p>
                 </div>
                 <div class="trust-card">
-                    <h3>Clinical Accountability</h3>
+                    <h3>Physician Supervision and Accountability</h3>
                     <p>Our program includes regular medical check-ins, dose optimization, and lifestyle coaching. Our team is there with you every step of the way to ensure you're progressing safely toward your desired goals.</p>
                 </div>
             </div>
@@ -168,7 +168,7 @@
                 <div class="step">
                     <div class="step-number">1</div>
                     <h3>Initial Assessment and Customization</h3>
-                    <p>We begin with comprehensive health assessment: weight, metabolic markers, medication review, lifestyle evaluation, and goal setting. Based on your health profile, our our team prescribes either semaglutide or tirzepatide at an appropriate starting dose. You'll learn injection technique (simple, subcutaneous self-injection once weekly).</p>
+                    <p>We begin with comprehensive health assessment: weight, metabolic markers, medication review, lifestyle evaluation, and goal setting. Based on your health profile, our physicians prescribe either semaglutide or tirzepatide at an appropriate starting dose. You'll learn injection technique (simple, subcutaneous self-injection once weekly).</p>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
@@ -205,8 +205,8 @@
                     <h3>Contraindications &amp; Cautions</h3>
                     <ul>
                     <li><strong>Personal or family history of thyroid cancer</strong> — GLP-1 agonists are contraindicated due to theoretical thyroid risk</li>
-                    <li><strong>Severe kidney disease</strong> — GLP-1 can affect kidney function; requires medical assessment</li>
-                    <li><strong>History of pancreatitis</strong> — Associated risk requires careful medical evaluation before starting</li>
+                    <li><strong>Severe kidney disease</strong> — GLP-1 can affect kidney function; requires physician assessment</li>
+                    <li><strong>History of pancreatitis</strong> — Associated risk requires careful physician evaluation before starting</li>
                     <li><strong>Pregnancy or planning pregnancy</strong> — GLP-1 medications must be discontinued; consult your OB-GYN</li>
                     <li><strong>Severe diabetic retinopathy</strong> — Rapid weight loss can worsen eye complications; requires monitoring</li>
                     <li><strong>Certain other medications</strong> — Some drugs interact; full medication review required before starting</li>
@@ -229,7 +229,7 @@
                 </div>
                 <div class="faq-item">
                     <h3>What is the difference between semaglutide and tirzepatide?</h3>
-                    <p>Semaglutide targets GLP-1 receptors only. Tirzepatide targets both GLP-1 and GIP receptors, providing dual hormone mimicry. Tirzepatide typically produces 20-25% weight loss while semaglutide produces 15-20% weight loss. Both are effective; yOur team will recommend based on your specific needs and medical history.</p>
+                    <p>Semaglutide targets GLP-1 receptors only. Tirzepatide targets both GLP-1 and GIP receptors, providing dual hormone mimicry. Tirzepatide typically produces 20-25% weight loss while semaglutide produces 15-20% weight loss. Both are effective; your physician will recommend based on your specific needs and medical history.</p>
                 </div>
                 <div class="faq-item">
                     <h3>How much weight can I expect to lose?</h3>
@@ -241,7 +241,7 @@
                 </div>
                 <div class="faq-item">
                     <h3>Are GLP-1 medications safe?</h3>
-                    <p>GLP-1 agonists are FDA-approved and have extensive safety data. Common side effects are mild and usually temporary: nausea, constipation, or diarrhea that resolve as your body adjusts. Serious side effects are rare. our team monitors your response through regular check-ins and blood work to ensure safety throughout your program.</p>
+                    <p>GLP-1 agonists are FDA-approved and have extensive safety data. Common side effects are mild and usually temporary: nausea, constipation, or diarrhea that resolve as your body adjusts. Serious side effects are rare. Our physicians monitor your response through regular check-ins and blood work to ensure safety throughout your program.</p>
                 </div>
                 <div class="faq-item">
                     <h3>What happens if I stop taking GLP-1 medication?</h3>
@@ -271,7 +271,10 @@
                     <a href="iv-therapy-alpharetta-ga.html" class="link-button">Learn More</a>
                 </div>
                 <div class="cross-link-card">
-
+                    <img src="/images/service-compression.jpg" alt="Compression therapy">
+                    <h3>Compression Therapy</h3>
+                    <p>Support circulation and recovery as you increase exercise and activity during your weight loss journey.</p>
+                    <a href="compression-therapy-alpharetta.html" class="link-button">Learn More</a>
                 </div>
             </div>
         </div>
@@ -281,7 +284,7 @@
         <div class="container">
             <div class="conversion-content">
                 <h2>Ready to Transform Your Weight and Health?</h2>
-                <p>Schedule your GLP-1 weight loss consultation at THRIVE 4 Peak Performance. our team will assess your candidacy and design your personalized program.</p>
+                <p>Schedule your GLP-1 weight loss consultation at THRIVE 4 Peak Performance. Our physicians will assess your candidacy and design your personalized program.</p>
                 <a href="tel:(470) 359-6195" class="btn btn-primary btn-lg">Call (470) 359-6195</a>
             </div>
             <p class="cta-address">THRIVE 4 Peak Performance | 3568 Old Milton Pkwy, Alpharetta, GA 30005<br>Serving Alpharetta, Milton, Roswell, Johns Creek, and Cumming</p>
@@ -345,7 +348,7 @@
           "itemOffered": {
             "@type": "Service",
             "name": "GLP-1 Weight Loss Program",
-            "description": "THRIVE Tech supervised GLP-1 weight loss program in Alpharetta, GA using semaglutide and tirzepatide for sustained weight loss.",
+            "description": "Physician-supervised GLP-1 weight loss program in Alpharetta, GA using semaglutide and tirzepatide for sustained weight loss.",
             "areaServed": [
               {"@type": "City", "name": "Alpharetta", "containedInPlace": {"@type": "State", "name": "Georgia"}},
               {"@type": "City", "name": "Milton", "containedInPlace": {"@type": "State", "name": "Georgia"}},

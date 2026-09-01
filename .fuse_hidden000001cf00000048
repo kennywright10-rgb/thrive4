@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="THRIVE Tech supervised IV therapy in Alpharetta. NAD+, Myers' Cocktail, immune support. Serving North Fulton athletes and wellness-focused adults.">
+    <meta name="description" content="Physician-supervised IV therapy in Alpharetta. NAD+, Myers' Cocktail, immune support. Serving North Fulton athletes and wellness-focused adults.">
     <meta name="keywords" content="IV therapy Alpharetta, NAD IV therapy, vitamin infusion Georgia, IV hydration North Fulton">
     
     <title>IV Therapy Alpharetta GA | THRIVE 4 Peak Performance</title>
@@ -30,7 +30,7 @@
         "@type": "City",
         "name": "Alpharetta"
       },
-      "description": "THRIVE Tech supervised intravenous vitamin therapy for energy, immunity, and athletic recovery"
+      "description": "Physician-supervised intravenous vitamin therapy for energy, immunity, and athletic recovery"
     }
     </script>
     
@@ -61,7 +61,7 @@
           "name": "How often should I get IV therapy?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Frequency depends on your goals. Many patients start with weekly sessions, then move to bi-weekly or monthly maintenance. our team provides personalized recommendations."
+            "text": "Frequency depends on your goals. Many patients start with weekly sessions, then move to bi-weekly or monthly maintenance. Our physicians provide personalized recommendations."
           }
         }
       ]
@@ -128,7 +128,7 @@
             </div>
             <div class="service-hero-content">
                 <h1>IV Therapy in Alpharetta, GA</h1>
-                <p class="service-hero-subtitle">Medical-grade vitamin infusions for energy, immunity, and rapid recovery. Board-certified professional oversight. No appointments needed for members.</p>
+                <p class="service-hero-subtitle">Medical-grade vitamin infusions for energy, immunity, and rapid recovery. Board-certified physician oversight. No appointments needed for members.</p>
                 <a href="/book-appointment/" class="btn btn-primary btn-lg">Schedule Your IV Session</a>
             </div>
         </div>
@@ -138,7 +138,7 @@
     <section class="service-intro">
         <div class="container">
             <div class="content-wrapper">
-                <p>IV therapy delivers essential vitamins, minerals, and amino acids directly into your bloodstream, bypassing the digestive system for 100% absorption. At THRIVE 4 Peak Performance, our  team customizes IV formulas to address your specific health goals—whether that's faster workout recovery, immune system support, or sustained energy throughout your day.</p>
+                <p>IV therapy delivers essential vitamins, minerals, and amino acids directly into your bloodstream, bypassing the digestive system for 100% absorption. At THRIVE 4 Peak Performance, our physician-led team customizes IV formulas to address your specific health goals—whether that's faster workout recovery, immune system support, or sustained energy throughout your day.</p>
                 
                 <p>Our Alpharetta clinic serves active adults from Milton, Roswell, and Johns Creek who demand more from their health. Every IV therapy session is supervised by licensed medical professionals using pharmaceutical-grade ingredients from certified compounding pharmacies.</p>
             </div>
@@ -164,7 +164,7 @@
                 <div class="column">
                     <h3>This may not be right for you if:</h3>
                     <ul class="caution-list">
-                        <li>You have kidney disease or are on dialysis (requires clearance)</li>
+                        <li>You have kidney disease or are on dialysis (requires physician clearance)</li>
                         <li>You're pregnant or breastfeeding (unless approved by your OB-GYN)</li>
                         <li>You have severe heart conditions without medical clearance</li>
                         <li>You're looking for a magic fix without lifestyle commitment</li>
@@ -267,12 +267,12 @@
                     <li>Current medications and supplements</li>
                     <li>Known allergies</li>
                     <li>Recent lab work (we can order bloodwork if needed)</li>
-                    <li>Health conditions requiring </li>
+                    <li>Health conditions requiring physician oversight</li>
                 </ul>
                 
                 <div class="disclaimer-box">
                     <h4>Medical Disclaimer</h4>
-                    <p>IV therapy is a medical service requiring professional oversight. Results vary by individual. We do not treat, cure, or diagnose disease. All protocols are designed to support wellness and optimize health within the scope of our licensed practice.</p>
+                    <p>IV therapy is a medical service requiring physician oversight. Results vary by individual. We do not treat, cure, or diagnose disease. All protocols are designed to support wellness and optimize health within the scope of our licensed practice.</p>
                 </div>
             </div>
         </div>
@@ -303,7 +303,11 @@
                     <p>Combine IV therapy with red light for enhanced cellular recovery</p>
                 </a>
                 
-
+                <a href="/services/compression-therapy-alpharetta/" class="related-card">
+                    <img src="/images/service-compression.jpg" alt="Compression Therapy">
+                    <h3>Compression Therapy</h3>
+                    <p>Add compression to your IV session for improved circulation</p>
+                </a>
                 
                 <a href="/services/nad-iv-therapy-alpharetta/" class="related-card">
                     <img src="/images/nad-hero.jpg" alt="NAD+ IV Therapy">
@@ -348,7 +352,7 @@
                 
                 <div class="faq-item">
                     <h3>How often should I get IV therapy?</h3>
-                    <p>Frequency depends on your goals. Many patients start with weekly sessions, then move to bi-weekly or monthly maintenance. our team provides personalized recommendations.</p>
+                    <p>Frequency depends on your goals. Many patients start with weekly sessions, then move to bi-weekly or monthly maintenance. Our physicians provide personalized recommendations.</p>
                 </div>
                 
                 <div class="faq-item">
@@ -370,7 +374,7 @@
             <div class="footer-grid">
                 <div class="footer-column">
                     <img src="/images/logo-white.png" alt="THRIVE 4 Peak Performance" class="footer-logo" width="200" height="66">
-                    <p>wellness and recovery clinic serving Alpharetta and North Fulton County.</p>
+                    <p>Physician-led wellness and recovery clinic serving Alpharetta and North Fulton County.</p>
                     <p><strong>Board-certified medical oversight.<br>Evidence-based therapies.</strong></p>
                     <div class="social-links">
                         <a href="#" aria-label="Instagram"><img src="/images/icon-instagram.svg" alt="Instagram" width="32" height="32"></a>
@@ -416,7 +420,7 @@
             </div>
             
             <div class="footer-bottom">
-                <p class="footer-disclaimer">Medical Disclaimer: Services provided by licensed medical professionals. Results vary. Not intended to diagnose, treat, cure, or prevent disease. Board-certified Licensed professionals.</p>
+                <p class="footer-disclaimer">Medical Disclaimer: Services provided by licensed medical professionals. Results vary. Not intended to diagnose, treat, cure, or prevent disease. Board-certified physician oversight. Licensed nurse practitioners.</p>
                 <p class="footer-copyright">© 2026 THRIVE 4 Peak Performance. All rights reserved. | <a href="/privacy-policy/">Privacy Policy</a> | <a href="/terms-of-service/">Terms of Service</a> | <a href="/medical-disclaimer/">Medical Disclaimer</a></p>
             </div>
         </div>

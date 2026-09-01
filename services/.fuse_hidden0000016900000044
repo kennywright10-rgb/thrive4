@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Custom massage chair therapy in Alpharetta, GA. THRIVE Tech supervised sessions combining deep tissue massage, heat, and compression for total muscle recovery and relaxation at THRIVE 4 Peak Performance.">
+    <meta name="description" content="Custom massage chair therapy in Alpharetta, GA. Physician-supervised sessions combining deep tissue massage, heat, and compression for total muscle recovery and relaxation at THRIVE 4 Peak Performance.">
     <meta name="keywords" content="massage chair therapy, custom massage, muscle recovery, relaxation, Alpharetta, North Fulton County">
     <meta property="og:title" content="Custom Massage Chair Therapy Alpharetta GA | THRIVE 4 Peak Performance">
-    <meta property="og:description" content="Advanced massage chair sessions for deep muscle recovery, tension relief, and total-body relaxation. THRIVE Tech supervised wellness in Alpharetta, GA.">
+    <meta property="og:description" content="Advanced massage chair sessions for deep muscle recovery, tension relief, and total-body relaxation. Physician-supervised wellness in Alpharetta, GA.">
     <meta property="og:image" content="https://thrive4peakperformance.com/images/service-massage-chair.jpg">
     <meta property="og:url" content="https://thrive4peakperformance.com/services/massage-chair-alpharetta.html">
     <title>Custom Massage Chair Therapy Alpharetta GA | THRIVE 4 Peak Performance</title>
@@ -47,7 +47,7 @@
                 "name": "Can I combine the massage chair with other services?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Absolutely. The massage chair pairs exceptionally well with IV therapy (relaxation while your infusion runs), cryotherapy (warm-up before or cool-down after)."
+                    "text": "Absolutely. The massage chair pairs exceptionally well with IV therapy (relaxation while your infusion runs), cryotherapy (warm-up before or cool-down after), and compression therapy for a full-body recovery circuit."
                 }
             },
             {
@@ -145,7 +145,7 @@
                 <div class="step">
                     <div class="step-number">3</div>
                     <h3>Post-Session & Pairing Options</h3>
-                    <p>After your session our team checks in on how you're feeling and can recommend next steps — whether that's booking a follow-up, adding cryotherapy as a same-day combination, or integrating the massage chair into an ongoing recovery protocol.</p>
+                    <p>After your session our team checks in on how you're feeling and can recommend next steps — whether that's booking a follow-up, adding cryotherapy or compression therapy as a same-day combination, or integrating the massage chair into an ongoing recovery protocol.</p>
                 </div>
             </div>
         </div>
@@ -173,9 +173,9 @@
                     <h3>Contraindications &amp; Cautions</h3>
                     <ul>
                         <li><strong>Acute injuries or fractures</strong> — Massage pressure is contraindicated over active injuries; consult our team</li>
-                        <li><strong>Deep vein thrombosis (DVT)</strong> — Compression contraindicated; requires clearance</li>
+                        <li><strong>Deep vein thrombosis (DVT)</strong> — Compression contraindicated; requires physician clearance</li>
                         <li><strong>Pregnancy (second/third trimester)</strong> — Speak with our staff about modifications</li>
-                        <li><strong>Recent surgery</strong> — Allow adequate healing time; medical clearance recommended</li>
+                        <li><strong>Recent surgery</strong> — Allow adequate healing time; physician clearance recommended</li>
                         <li><strong>Severe osteoporosis</strong> — Roller pressure may need modification; our team will assess</li>
                     </ul>
                     <p class="disclaimer-note">Our staff reviews your health intake before every session and will adjust or defer if needed.</p>
@@ -201,7 +201,7 @@
                 </div>
                 <div class="faq-item">
                     <h3>Can I combine the massage chair with other services?</h3>
-                    <p>Yes — this is one of the most common combinations at THRIVE. The chair pairs naturally with IV therapy (receive your infusion while getting a massage), cryotherapy (warm muscles before a session, or relax them after).</p>
+                    <p>Yes — this is one of the most common combinations at THRIVE. The chair pairs naturally with IV therapy (receive your infusion while getting a massage), cryotherapy (warm muscles before a session, or relax them after), and compression therapy for a comprehensive lower-body recovery circuit.</p>
                 </div>
                 <div class="faq-item">
                     <h3>How often should I come in?</h3>
@@ -226,7 +226,11 @@
                     <h3>Cryotherapy</h3>
                     <p>Warm up tense muscles before cryo, or use the chair post-session as your body rebounds from the cold.</p>
                 </a>
-
+                <a href="compression-therapy-alpharetta.html" class="related-card">
+                    <img src="/images/service-compression.jpg" alt="Compression therapy Alpharetta">
+                    <h3>Compression Therapy</h3>
+                    <p>Combine upper-body massage chair work with lower-body compression boots for a complete recovery circuit.</p>
+                </a>
             </div>
         </div>
     </section>

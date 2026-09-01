@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Whole body cryotherapy in Alpharetta, GA — reduce inflammation, speed recovery, and boost energy in minutes. THRIVE clinic. Book your session today.">
+    <meta name="description" content="Whole body cryotherapy in Alpharetta, GA — reduce inflammation, speed recovery, and boost energy in minutes. Physician-led clinic. Book your session today.">
 
     <title>Cryotherapy Alpharetta, GA | THRIVE 4 Peak Performance</title>
 
@@ -13,7 +13,7 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Cryotherapy in Alpharetta, GA | THRIVE 4 Peak Performance">
-    <meta property="og:description" content="Whole-body cryotherapy at 0°F to -220°F. THRIVE Tech supervised cold therapy for inflammation, recovery, and pain relief in Alpharetta, GA.">
+    <meta property="og:description" content="Whole-body cryotherapy at 0°F to -220°F. Physician-supervised cold therapy for inflammation, recovery, and pain relief in Alpharetta, GA.">
     <meta property="og:url" content="https://www.thrive4peakperformance.com/services/cryotherapy-alpharetta-ga.html">
     <meta property="og:image" content="https://www.thrive4peakperformance.com/images/cryotherapy-hero.jpg">
     <meta name="twitter:card" content="summary_large_image">
@@ -49,7 +49,7 @@
           "name": "How many cryotherapy sessions do I need to see results?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Many patients notice benefits after the first session — reduced soreness, improved mood, better sleep. For chronic inflammation or ongoing athletic recovery, a series of 5–10 sessions over 2–4 weeks typically produces the most significant results. Our team will recommend a protocol tailored to your goals."
+            "text": "Many patients notice benefits after the first session — reduced soreness, improved mood, better sleep. For chronic inflammation or ongoing athletic recovery, a series of 5–10 sessions over 2–4 weeks typically produces the most significant results. Our physician will recommend a protocol tailored to your goals."
           }
         },
         {
@@ -81,7 +81,7 @@
           "name": "Where is cryotherapy available near Alpharetta, GA?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "THRIVE 4 Peak Performance offers THRIVE Tech supervised whole-body cryotherapy at 3568 Old Milton Pkwy, Alpharetta, GA 30005 — one mile east of Avalon. We serve patients from Milton, Roswell, Johns Creek, Cumming, and Sandy Springs."
+            "text": "THRIVE 4 Peak Performance offers physician-supervised whole-body cryotherapy at 3568 Old Milton Pkwy, Alpharetta, GA 30005 — one mile east of Avalon. We serve patients from Milton, Roswell, Johns Creek, Cumming, and Sandy Springs."
           }
         }
       ]
@@ -95,7 +95,7 @@
       "@type": "Service",
       "serviceType": "Cryotherapy",
       "name": "Cryotherapy in Alpharetta, GA",
-      "description": "Whole-body cryotherapy at 0°F to -220°F — THRIVE Tech supervised cold therapy for inflammation reduction, athletic recovery, and lasting pain relief.",
+      "description": "Whole-body cryotherapy at 0°F to -220°F — physician-supervised cold therapy for inflammation reduction, athletic recovery, and lasting pain relief.",
       "provider": {
         "@type": "MedicalBusiness",
         "@id": "https://www.thrive4peakperformance.com/#business",
@@ -139,7 +139,7 @@
                     Whole-body cryotherapy (WBC) exposes your body to ultra-cold temperatures — between 0°F and -220°F — for a controlled 2–3 minute session. The rapid cold triggers a cascade of physiological responses: blood is redirected to your core, your body floods with anti-inflammatory cytokines, and when you step out, oxygen-rich blood rushes back to your muscles and joints. The effect is immediate — most patients notice reduced soreness, elevated mood, and better sleep the same day.
                 </p>
                 <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1rem;">
-                    At THRIVE 4 Peak Performance, before anyone can have a 2–3 minute session they must be screened by our clinical professionals (GFE) and signed off by our Medical Director to avoid any contraindications. We serve patients from Alpharetta, Milton, Roswell, Johns Creek, and Cumming.
+                    At THRIVE 4 Peak Performance, every cryotherapy session is supervised by our clinical team under physician oversight — not a staffed spa. This matters because proper screening and monitoring are what separate a therapeutic outcome from a risk. We serve patients from Alpharetta, Milton, Roswell, Johns Creek, and Cumming.
                 </p>
             </div>
         </div>
@@ -155,7 +155,7 @@
             <div class="trust-grid">
                 <div class="trust-card">
                     <h3>Rapid Inflammation Reduction</h3>
-                    <p>Cold exposure triggers a powerful anti-inflammatory response within minutes. Chronic inflammation — the root driver of most pain and metabolic dysfunction — responds well to consistent cryotherapy protocols designed by Our team.</p>
+                    <p>Cold exposure triggers a powerful anti-inflammatory response within minutes. Chronic inflammation — the root driver of most pain and metabolic dysfunction — responds well to consistent cryotherapy protocols designed by our physician.</p>
                 </div>
                 <div class="trust-card">
                     <h3>Accelerated Muscle Recovery</h3>
@@ -222,7 +222,7 @@
                     <li><strong>People with chronic joint pain</strong> — Arthritis, fibromyalgia, and tendonitis respond well to repeated cold exposure</li>
                     <li><strong>Individuals managing inflammation</strong> — Whole-body cryo drives a systemic anti-inflammatory response</li>
                     <li><strong>Executives and high performers</strong> — Norepinephrine release sharpens mental focus and mood for hours after</li>
-                    <li><strong>Anyone recovering from orthopedic procedures</strong> — our team-cleared patients use cryo to accelerate post-surgical healing</li>
+                    <li><strong>Anyone recovering from orthopedic procedures</strong> — Physician-cleared patients use cryo to accelerate post-surgical healing</li>
                     </ul>
                 </div>
                 <div class="for-column not-right">
@@ -230,8 +230,8 @@
                     <ul>
                     <li><strong>Uncontrolled high blood pressure</strong> — Cold exposure causes acute cardiovascular stress; requires clearance</li>
                     <li><strong>Pregnancy</strong> — Extreme cold temperatures are contraindicated during pregnancy</li>
-                    <li><strong>Cold allergy or Raynaud's disease</strong> — Cold urticaria or severe vasospasm risk; medical evaluation required</li>
-                    <li><strong>Severe cardiovascular conditions</strong> — Recent cardiac events or arrhythmias require our team sign-off</li>
+                    <li><strong>Cold allergy or Raynaud's disease</strong> — Cold urticaria or severe vasospasm risk; physician evaluation required</li>
+                    <li><strong>Severe cardiovascular conditions</strong> — Recent cardiac events or arrhythmias require physician sign-off</li>
                     <li><strong>Open wounds or active skin infections</strong> — Skin must be intact and free of active infection before treatment</li>
                     </ul>
                     <p class="disclaimer-note">Medical screening is required before your first session — we'll confirm eligibility at your consultation.</p>
@@ -248,7 +248,7 @@
             </div>
             <div style="max-width: 800px; margin: 0 auto; text-align: center;">
                 <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
-                    We offer single sessions as well as package programs. For chronic inflammation, injury recovery, or performance optimization, Our team will design a protocol with frequency and duration matched to your goals. Call us or book online — we'll get you scheduled within 48 hours.
+                    We offer single sessions as well as package programs. For chronic inflammation, injury recovery, or performance optimization, our physician will design a protocol with frequency and duration matched to your goals. Call us or book online — we'll get you scheduled within 48 hours.
                 </p>
                 <p style="color: #6B7280; font-size: 0.95rem;">Located at 3568 Old Milton Pkwy, Alpharetta, GA — one mile east of Avalon. Serving Alpharetta, Milton, Roswell, Johns Creek, and Cumming.</p>
             </div>
@@ -268,7 +268,7 @@
                 </div>
                 <div style="margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #E5E7EB;">
                     <h3 style="margin-bottom: 0.75rem;">How many sessions do I need?</h3>
-                    <p>Many patients feel benefits after just one session. For chronic inflammation or performance goals, a series of 5–10 sessions over 2–4 weeks typically produces the strongest cumulative effect. Our team will tailor a recommendation to your situation.</p>
+                    <p>Many patients feel benefits after just one session. For chronic inflammation or performance goals, a series of 5–10 sessions over 2–4 weeks typically produces the strongest cumulative effect. Our physician will tailor a recommendation to your situation.</p>
                 </div>
                 <div style="margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #E5E7EB;">
                     <h3 style="margin-bottom: 0.75rem;">Is it safe?</h3>
@@ -284,7 +284,7 @@
                 </div>
                 <div>
                     <h3 style="margin-bottom: 0.75rem;">Can I combine cryotherapy with other services?</h3>
-                    <p>Absolutely. Cryotherapy pairs especially well with red light therapy (for cellular recovery) and IV therapy (for systemic anti-inflammatory support). our team can design a combined protocol for your goals.</p>
+                    <p>Absolutely. Cryotherapy pairs especially well with compression therapy (immediately after for drainage), red light therapy (for cellular recovery), and IV therapy (for systemic anti-inflammatory support). Our physician can design a combined protocol for your goals.</p>
                 </div>
             </div>
         </div>
@@ -297,6 +297,12 @@
                 <h2>Often Combined With Cryotherapy</h2>
             </div>
             <div class="services-compact-grid">
+                <a href="/services/compression-therapy-alpharetta.html" class="service-compact-card">
+                    <div class="service-compact-image">
+                        <img src="/images/service-compression.jpg" alt="Compression therapy in Alpharetta" loading="lazy">
+                    </div>
+                    <div class="service-compact-content"><h3>COMPRESSION BOOTS</h3></div>
+                </a>
                 <a href="/services/red-light-therapy-alpharetta.html" class="service-compact-card">
                     <div class="service-compact-image">
                         <img src="/images/service-red-light.jpg" alt="Red light therapy in Alpharetta" loading="lazy">
