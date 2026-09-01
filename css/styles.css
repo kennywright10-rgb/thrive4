@@ -371,9 +371,10 @@ strong {
 
 .hero-cta {
     display: flex;
+    flex-direction: row;
     gap: 1.5rem;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
     align-items: center;
 }
 
