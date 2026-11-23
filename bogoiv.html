@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BOGO IV Deal — 2 for $189. Meyers Cocktail or TNT Performance Blend. Available Tuesdays & Saturdays at THRIVE 4 Peak Performance in Alpharetta, GA.">
+    <title>BOGO IV Special — 2 for $189 | THRIVE 4 Peak Performance</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#00CED1">
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FQN6ZGY0P9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-FQN6ZGY0P9', { 'send_page_view': true });
+        document.addEventListener('DOMContentLoaded', function() {
+            var form = document.getElementById('bogoForm');
+            if (form) {
+                form.addEventListener('submit', function() {
+                    gtag('event', 'form_submit', { 'event_category': 'conversion', 'event_label': 'BOGO IV Lead' });
+                });
+            }
+        });
+    </script>
+
+    <link rel="stylesheet" href="/css/styles-updated.css">
+
+    <style>
+        /* ── OFFER BANNER ── */
+        .bogo-banner {
+            background: linear-gradient(135deg, #004aad 0%, #0066cc 100%);
+            color: #fff;
+            text-align: center;
+            padding: 1rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        /* ── HERO ── */
+        .bogo-hero {
+            background: linear-gradient(135deg, #003a8c 0%, #005bb5 60%, #00CED1 100%);
+            color: #fff;
+            text-align: center;
+            padding: 4rem 1.5rem 3rem;
+        }
+        .bogo-hero .eyebrow {
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            opacity: 0.85;
+            margin-bottom: 0.75rem;
+        }
+        .bogo-hero h1 {
+            font-size: clamp(2.5rem, 7vw, 4.5rem);
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+        .bogo-hero h1 span {
+            color: #00CED1;
+        }
+        .bogo-hero .subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        /* ── DEAL CARDS ── */
+        .deal-cards {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        .deal-card {
+            background: rgba(255,255,255,0.12);
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 16px;
+            padding: 1.75rem 2rem;
+            min-width: 220px;
+            flex: 1;
+            max-width: 280px;
+        }
+        .deal-card .deal-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            opacity: 0.75;
+            margin-bottom: 0.5rem;
+        }
+        .deal-card .deal-price {
+            font-size: 2.75rem;
+            font-weight: 900;
+            line-height: 1;
+            color: #fff;
+            margin-bottom: 0.4rem;
+        }
+        .deal-card .deal-desc {
+            font-size: 0.9rem;
+            opacity: 0.85;
+            line-height: 1.5;
+        }
+        .deal-or {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            font-weight: 700;
+            opacity: 0.7;
+        }
+        .bogo-hero .avail {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 50px;
+            padding: 0.5rem 1.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.75rem;
+        }
+        .bogo-hero .tagline {
+            font-size: 1.1rem;
+            font-style: italic;
+            opacity: 0.8;
+        }
+
+        /* ── LAYOUT ── */
+        .bogo-layout {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 3rem;
+            align-items: start;
+            padding: 4rem 0;
+        }
+        @media (max-width: 900px) {
+            .bogo-layout {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 2rem 0;
+            }
+        }
+
+        /* ── FORM CARD ── */
+        .booking-form-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.1);
+            padding: 2.5rem;
+        }
+        .booking-form-card h2 {
+            font-size: 1.6rem;
+            color: #1a1a1a;
+            margin-bottom: 0.4rem;
+        }
+        .booking-form-card .form-intro {
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 0.4rem;
+            font-size: 0.9rem;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1.5px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #1a1a1a;
+            background: #fafafa;
+            transition: border-color 0.2s;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #00CED1;
+            background: #fff;
+        }
+        .required { color: #e74c3c; }
+        .btn-full { width: 100%; text-align: center; }
+        .form-privacy {
+            font-size: 0.8rem;
+            color: #999;
+            margin-top: 1rem;
+            text-align: center;
+            line-height: 1.5;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        @media (max-width: 500px) {
+            .form-row { grid-template-columns: 1fr; }
+        }
+
+        /* ── SIDEBAR ── */
+        .info-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+        .info-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 1.75rem;
+        }
+        .info-card h3 {
+            font-size: 1.1rem;
+            color: #1a1a1a;
+            margin-bottom: 0.75rem;
+        }
+        .info-card p {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+        .info-card a { color: #00CED1; }
+        .detail-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 0.95rem;
+            color: #444;
+        }
+        .detail-row:last-child { border-bottom: none; }
+        .detail-row .icon { font-size: 1.1rem; flex-shrink: 0; }
+        .detail-row strong { color: #1a1a1a; }
+
+        /* ── WHAT'S INCLUDED ── */
+        .included-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .included-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 0.95rem;
+            color: #444;
+        }
+        .included-list li:last-child { border-bottom: none; }
+        .included-list li::before {
+            content: "💧 ";
+        }
+
+        /* ── BOTTOM CTA ── */
+        .bogo-cta {
+            background: linear-gradient(135deg, #003a8c, #005bb5);
+            color: #fff;
+            text-align: center;
+            padding: 3rem 1.5rem;
+        }
+        .bogo-cta h2 { color: #fff; margin-bottom: 0.5rem; font-size: 1.75rem; }
+        .bogo-cta p { opacity: 0.85; margin-bottom: 1.5rem; }
+        .bogo-cta a.phone { color: #00CED1; font-size: 1.5rem; font-weight: 800; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <!-- URGENCY BANNER -->
+    <div class="bogo-banner">🔥 Available Tuesdays &amp; Saturdays Only — 9AM to 2PM</div>
+
+    <!-- HERO -->
+    <div class="bogo-hero">
+        <div class="container">
+            <p class="eyebrow">Tuesday and Saturday just got better</p>
+            <h1>BOGO <span>IV</span></h1>
+            <p class="subtitle">2‑4‑1 Special — It's in the Bag!</p>
+
+            <div class="deal-cards">
+                <div class="deal-card">
+                    <p class="deal-label">Bring a Friend</p>
+                    <p class="deal-price">2 for $189</p>
+                    <p class="deal-desc">Meyers Cocktail or TNT Performance Blend<br>Couples · Besties · BFFs</p>
+                </div>
+                <div class="deal-or">OR</div>
+                <div class="deal-card">
+                    <p class="deal-label">Solo Session</p>
+                    <p class="deal-price">$79<span style="font-size:1.1rem;font-weight:600;"> /bag</span></p>
+                    <p class="deal-desc">Add-Ons available<br><strong style="color:#00CED1;">$20 each</strong></p>
+                </div>
+            </div>
+
+            <span class="avail">📅 Tuesdays &amp; Saturdays · 9AM – 2PM</span><br>
+            <span class="tagline">Survive or THRIVE... It's A Choice.</span>
+        </div>
+    </div>
+
+    <!-- FORM + SIDEBAR -->
+    <section style="background:#F9FAFB;">
+        <div class="container">
+            <div class="bogo-layout">
+
+                <!-- FORM -->
+                <div class="booking-form-card">
+                    <h2>Claim Your BOGO IV Deal</h2>
+                    <p class="form-intro">Fill out the form and our team will reach out to confirm your spot. Available <strong>Tuesdays &amp; Saturdays, 9AM–2PM</strong> only.</p>
+
+                    <form id="bogoForm" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="3084231b-5609-4e36-848e-e9a8bdd77d95">
+                        <input type="hidden" name="subject" value="🎉 BOGO IV Lead — THRIVE 4 Peak Performance">
+                        <input type="hidden" name="from_name" value="THRIVE Website — BOGO IV Landing Page">
+                        <input type="hidden" name="redirect" value="https://thrive4peakperformance.com/thank-you.html">
+                        <input type="hidden" name="service" value="BOGO IV Deal">
+                        <input type="checkbox" name="botcheck" style="display:none;">
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Full Name <span class="required">*</span></label>
+                                <input type="text" id="fullName" name="fullName" required placeholder="Jane Smith">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number <span class="required">*</span></label>
+                                <input type="tel" id="phone" name="phone" required placeholder="(470) 123-4567">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required placeholder="jane@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="deal">Which deal are you interested in? <span class="required">*</span></label>
+                            <select id="deal" name="deal" required>
+                                <option value="">Select your deal…</option>
+                                <option value="2-for-189">2 for $189 — Bring a friend (Meyers Cocktail or TNT Blend)</option>
+                                <option value="79-per-bag">$79 per bag — Solo session</option>
+                                <option value="both">Not sure yet — tell me more</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="day">Preferred Day <span class="required">*</span></label>
+                            <select id="day" name="preferred_day" required>
+                                <option value="">Select a day…</option>
+                                <option value="Tuesday">Tuesday</option>
+                                <option value="Saturday">Saturday</option>
+                                <option value="Either">Either works</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Anything else we should know?</label>
+                            <textarea id="message" name="message" rows="3" placeholder="Add-ons you're interested in, questions, etc."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg btn-full" style="font-size:1.1rem; padding:1rem;">Claim My BOGO IV Spot →</button>
+
+                        <p class="form-privacy">Your information is kept confidential. We'll reach out within 2 hours during business hours.</p>
+                    </form>
+                </div>
+
+                <!-- SIDEBAR -->
+                <div class="info-sidebar">
+
+                    <div class="info-card">
+                        <h3>💧 What's Included</h3>
+                        <ul class="included-list">
+                            <li>Meyers Cocktail <em>or</em> TNT Performance Blend</li>
+                            <li>Hydrate · Replenish · Recover · Perform</li>
+                            <li>Add-Ons available at $20 each</li>
+                            <li>Supervised by certified THRIVE TECHs</li>
+                            <li>Private, comfortable IV suite</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>📋 Deal Details</h3>
+                        <div class="detail-row">
+                            <span class="icon">📅</span>
+                            <span><strong>When:</strong> Tuesdays &amp; Saturdays only</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="icon">🕘</span>
+                            <span><strong>Hours:</strong> 9:00 AM – 2:00 PM</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="icon">📍</span>
+                            <span><strong>Location:</strong> 3568 Old Milton Pkwy, Alpharetta, GA</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="icon">📞</span>
+                            <span><strong>Phone:</strong> <a href="tel:4703596195">(470) 359-6195</a></span>
+                        </div>
+                    </div>
+
+                    <div class="info-card" style="background: linear-gradient(135deg, #003a8c, #005bb5); color:#fff;">
+                        <h3 style="color:#fff;">💬 Questions?</h3>
+                        <p style="color:rgba(255,255,255,0.85);">Call or text us and we'll get you squared away.</p>
+                        <a href="tel:4703596195" class="btn btn-primary btn-full" style="display:block; text-align:center; background:#00CED1; border-color:#00CED1;">(470) 359-6195</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOTTOM CTA -->
+    <div class="bogo-cta">
+        <h2>It's in the Bag!</h2>
+        <p>Tuesdays &amp; Saturdays · 9AM–2PM · 3568 Old Milton Pkwy, Alpharetta</p>
+        <a href="tel:4703596195" class="phone">(470) 359-6195</a>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('/header.html')
+            .then(r => r.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                if (typeof initMobileMenu === 'function') initMobileMenu();
+            })
+            .catch(e => console.error('Header error:', e));
+
+        fetch('/footer.html')
+            .then(r => r.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(e => console.error('Footer error:', e));
+    </script>
+    <script src="/js/main.js"></script>
+
+</body>
+</html>
